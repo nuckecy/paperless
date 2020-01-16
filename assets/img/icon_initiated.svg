@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30.3" height="36.5" viewBox="0 0 30.3 36.5">
+  <g id="Group_342" data-name="Group 342" transform="translate(0.75 0.75)">
+    <g id="clipboard_2_" data-name="clipboard (2)">
+      <path id="Path_359" data-name="Path 359" d="M25.6,4h3.6a3.573,3.573,0,0,1,3.6,3.544V32.356A3.573,3.573,0,0,1,29.2,35.9H7.6A3.573,3.573,0,0,1,4,32.356V7.544A3.573,3.573,0,0,1,7.6,4h3.6" transform="translate(-4 -0.9)" fill="none" stroke="#afafaf" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      <rect id="Rectangle_203" data-name="Rectangle 203" width="17" height="6" rx="1" transform="translate(5.8)" stroke-width="1.5" stroke="#afafaf" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    </g>
+    <g id="Group_261" data-name="Group 261" transform="translate(19.548 17.155) rotate(90)">
+      <path id="Path_361" data-name="Path 361" d="M-2.665,6.6,0,1.625V13" transform="translate(2.665 -1.625)" fill="none" stroke="#afafaf" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      <path id="Path_362" data-name="Path 362" d="M0,4.979,2.665,0V11.375" transform="translate(8.665 11.375) rotate(180)" fill="none" stroke="#afafaf" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    </g>
+  </g>
+</svg>

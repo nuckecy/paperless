@@ -1,0 +1,269 @@
+.aside-menu-link:hover, .aside-menu-link:focus {
+    color: #fff !important; 
+  }
+.white,
+.table,
+.dataTables_info {
+  color: #fff !important;
+}
+.nav-aside .nav-item ul a {
+    display: block;
+    color: #fff ;
+    padding: 2px 0; 
+  }
+  .nav-aside .nav-item ul a:hover, .nav-aside .nav-item ul a:focus {
+      color: red; 
+    }
+  .nav-aside .nav-item ul .active a {
+    color: #fff; 
+  }
+  .nav-aside .with-sub.show:not(.active) .nav-link:focus{
+    color: #fff;
+  } 
+  .nav-aside .with-sub.show:not(.active) .nav-link {
+    color: #fff !important; }
+  .nav-aside .with-sub.show:not(.active) svg {
+    color: #fff !important; }
+.card {
+    background-color: #393939;
+    border-color: #707070;
+    border: 0.5px solid #474747;
+}
+
+.border-1 {
+    border: 0.5px solid #707070 !important;
+}
+
+.border-2 {
+  border-left: 0.5px solid #707070 !important;
+  border-bottom: 0.5px solid #707070 !important;
+  border-right: 0.5px solid #707070 !important;
+}
+
+.nav-aside .nav-item.active .nav-link {
+  background-color: #393939;
+}
+
+.nav-aside .nav-link,
+.nav-aside svg {
+  color: #AFAFAF;
+}
+
+.nav-aside .nav-item.active .nav-link,
+.nav-aside .nav-item.active svg {
+  color: #fff;
+}
+
+.content-header,
+.aside-header,
+.aside-body {
+  background-color: #393939 !important;
+}
+.content-header
+{
+  border-bottom: 1px solid #474747;
+}
+.aside-header {
+  border-right: 1px solid #474747;
+}
+.aside-body {
+  border-top: 1px solid #474747;
+  border-right: 1px solid #474747;
+}
+
+.dark-bg-1 {
+  background-color: #393939;
+  /* border: 1px solid #474747; */
+}
+
+.nav-aside .nav-link:hover,
+.nav-aside svg:hover {
+  color: #fff;
+  font-weight: 600;
+}
+
+.tab-content{
+  border: 1px solid #474747 !important;
+  border-top: none !important;
+}
+
+
+body {
+    background-color: #2f2f2f;
+}
+/* Icon Buttton Starts here  */
+  .icon-btn {
+    width: 50px;
+    height: 50px;
+    border:2px solid #707070;
+    background: red;
+    border-radius: 25px;
+    overflow: hidden;
+    position: relative;
+    transition: width 0.2s ease-in-out;
+  }
+  .add-btn:hover {
+    width: 120px;
+  }
+  .add-btn::before,
+  .add-btn::after {
+    transition: width 0.2s ease-in-out, border-radius 0.2s ease-in-out;
+    content: "";
+    position: absolute;
+    height: 4px;
+    width: 10px;
+    top: calc(50% - 2px);
+    background: white;
+  }
+  .add-btn::after {
+    right: 14px;
+    overflow: hidden;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+  }
+  .add-btn::before {
+    left: 14px;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+  }
+  .icon-btn:focus {
+    outline: none;
+  }
+  .btn-txt {
+    opacity: 0;
+    transition: opacity 0.2s;
+    color: white;
+  }
+  .add-btn:hover::before,
+  .add-btn:hover::after {
+    width: 4px;
+    border-radius: 2px;
+  }
+  .add-btn:hover .btn-txt {
+    opacity: 1;
+  }
+  .add-icon::after,
+  .add-icon::before {
+    transition: all 0.2s ease-in-out;
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 2px;
+    top: calc(50% - 10px);
+    background: white;
+    overflow: hidden;
+  }
+  .add-icon::before {
+    left: 22px;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+  }
+  .add-icon::after {
+    right: 22px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+  }
+  .add-btn:hover .add-icon::before {
+    left: 15px;
+    height: 4px;
+    top: calc(50% - 2px);
+  }
+  .add-btn:hover .add-icon::after {
+    right: 15px;
+    height: 4px;
+    top: calc(50% - 2px);
+  }
+  
+/* Icon Buttton Ends here  */
+
+.nav-tabs .nav-link {
+    background-color: #393939;
+    border-bottom-width: 1px;
+    border-color: #474747 #474747 #474747 #474747;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    color: #717171;
+}
+
+.nav-tabs .nav-link.active, .nav-tabs .nav-link:hover {
+    background-color: #2f2f2f;
+    border-color: #0000000A;
+    color: #fff;
+}
+
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-item.show .nav-link {
+  color: #ffffff;
+  background-color: #272727;
+  border: 1px solid;
+  border-color: #474747 #474747 #474747 #474747;
+}
+
+#myTabContent {
+    border: 0;
+}
+
+.progress-circle:after {
+  background-color: rgb(63, 63, 63);;
+}
+
+.progress-circle span {
+  color:#fff;
+}
+
+input {
+    background-color: #393939;
+}
+
+.dataTables_wrapper .dataTables_length {
+  color: #e0e0e0;
+}
+
+/* Search Border Color */
+.dataTables_wrapper .dataTables_filter input {
+    border: 1px solid #474747;
+    color: #fff;
+    box-shadow: none;
+}
+
+.table-borderless td {
+    border: 0;
+    color: white !important;
+}
+
+.table-borderless th {
+  border: 0;
+  color: #E0E0E0 !important;
+}
+
+table.dataTable.no-footer {
+  border: none !important;
+}
+
+select {
+  background-color: #2f2f2f;
+  color: #e0e0e0;
+  font: 600;
+  border-radius: 2px;
+  border: 1px solid #707070;
+
+}
+
+/* table.dataTable thead th {
+  border-bottom: 2px solid #2f2f2f;
+} */
+
+table.dataTable tbody td.sorting_1,
+table.dataTable tbody tr {
+    background-color: #393939;
+}
+
+table.dataTable thead .sorting_asc,
+table.dataTable thead .sorting_desc {
+  background-color: #2f2f2f !important;
+}
+
+.badge-danger {
+    background-color: #D70900;
+}

@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="SPMP - Smart Process Management Platform">
+    <title>SPMP - Smart Process Management Platform</title>
+
+    <!-- Required External CSS -->
+    <link href="assets/lib/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="assets/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+    <link href="assets/lib/jqvmap/jqvmap.min.css" rel="stylesheet">
+
+    <link href="assets/lib/prismjs/themes/prism-vs.css" rel="stylesheet">
+    <link href="assets/lib/datatables.net-dt/css/jquery.dataTables.min.css" rel="stylesheet">
+    <link href="assets/lib/datatables.net-responsive-dt/css/responsive.dataTables.min.css" rel="stylesheet">
+    <link href="assets/lib/select2/css/select2.min.css" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+
+    <!-- DashForge CSS -->
+    <link rel="stylesheet" href="assets/css/dashforge.css">
+    <link rel="stylesheet" href="assets/css/dashforge.dashboard.css">
+
+    <!-- Page CSS -->
+    <link rel="stylesheet" href="assets/css/dashforge.css">
+    <link rel="stylesheet" href="assets/css/dashforge.dashboard.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel="stylesheet" href="assets/css/progress.css">
+    <!-- <link rel="stylesheet" href="assets/css/skin.dark.css"> -->
+  </head>
+  <body>
+
+    <aside class="aside aside-fixed">
+      <div class="aside-header">
+        <a href="index.html" class="aside-logo">
+          <div><img class="uba-logo" alt="SPMP Logo Dark" src="assets/img/spmp_logo_dark.svg"></div>
+        </a>
+        <a href="" class="aside-menu-link">
+          <i data-feather="menu"></i>
+          <i data-feather="x"></i>
+        </a>
+      </div>
+      <div class="aside-body">
+        <div class="aside-loggedin">
+          <div class="d-flex align-items-center justify-content-start">
+            <a href="" class="avatar"><img src="assets/img/boy.svg" class="rounded-circle" alt=""></a>
+            <div class="aside-alert-link">
+              <a href="" class="white" data-toggle="tooltip" title="Sign out"><i data-feather="log-out"></i></a>
+            </div>
+          </div>
+          <div class="aside-loggedin-user">
+            <a href="#loggedinMenu" class="d-flex align-items-center justify-content-between mg-b-2" data-toggle="collapse">
+              <h6 class="tx-semibold mg-b-0 white">Katherine Pechon</h6>
+            </a>
+            <p class="tx-color-03 tx-12 mg-b-0">Administrator</p>
+          </div>
+        </div><!-- aside-loggedin -->
+        <ul class="nav nav-aside">
+          <!-- <li class="nav-label">Dashboard</li> -->
+
+          <li class="nav-item active"><a href="dashboard-one.html" class="nav-link"><i data-feather="grid"></i> <span class="marine-active-menu">Dashboard</span></a></li>
+          <li class="nav-item with-sub">
+            <a href="" class="nav-link"><i data-feather="clipboard"></i> <span>Requests</span></a>
+            <ul>  
+             
+              <li><span></span><a href="page-profile-view.html">New Request</a></li>
+              <li><a href="page-connections.html">My Form Request</a></li>
+              <li><a href="page-groups.html">Process Approval Request</a></li>
+
+            </ul>
+          </li>
+          <li class="nav-item"><a href="dashboard-two.html" class="nav-link"><i data-feather="archive"></i><span>Process Approval</span></a></li>
+          <li class="nav-item with-sub">
+            <a href="dashboard-two.html" class="nav-link"><i data-feather="activity"></i><span>Report</span></a>
+          </li>
+          
+        </ul>
+      </div>
+    </aside>
+
+    <div class="content ht-100v pd-0">
+      <div class="content-header bg-dark-1">
+        <div class="content-search">
+          <p class="app-title tx-color-01 pt-3 white">SMART PROCESS MANAGEMENT PLATFORM</p>
+        </div>
+        <nav class="nav">
+          <div><img class="uba-logo" alt="UBA Logo Dark" src="assets/img/uba_logo_red.svg"></div>
+          <a href="" class="nav-link pt-2 white" data-toggle="tooltip" title="Sign out"><i data-feather="log-out"></i></a>
+        </nav>
+      </div><!-- content-header -->
+
+      <div class="content-body">
+        <div class="container pd-x-0">
+          <div class="d-sm-flex align-items-center justify-content-between mg-b-20 mg-lg-b-25 mg-xl-b-30">
+            <div>
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb breadcrumb-style1 mg-b-10 white">
+                  <li class="breadcrumb-item"><a href="#" class='white'>Dashboard</a></li>
+                </ol>
+              </nav>
+              <h4 class="mg-b-0 tx-spacing--1 white">Welcome to Dashboard</h4>
+            </div>
+            <div class="" style="text-align: center;margin-top:5%">
+              <button class="icon-btn add-btn">
+                <div class="add-icon"></div>
+                <div class="btn-txt">Add</div>
+              </button>
+            </div>
+            <!-- <div class="d-none d-md-block">
+              <button class="btn btn-sm pd-x-15 btn-white btn-uppercase"><i data-feather="mail" class="wd-10 mg-r-5"></i> Email</button>
+              <button class="btn btn-sm pd-x-15 btn-white btn-uppercase mg-l-5"><i data-feather="printer" class="wd-10 mg-r-5"></i> Print</button>
+              <button class="btn btn-sm pd-x-15 btn-primary btn-uppercase mg-l-5"><i data-feather="file" class="wd-10 mg-r-5"></i> Generate Report</button>
+            </div> -->
+          </div>
+
+          <div class="row row-xs">
+            <div class="col-sm-6 col-xs-6 col-lg-2">
+              <div class="card card-body p-3">
+                <h6 class="tx-uppercase tx-10 tx-spacing-1 tx-color-02 tx-semibold mg-b-8 tx-right white">ASSIGNED TO YOU</h6>
+                <div class="d-flex d-lg-block d-xl-flex align-items-end justify-content-between">
+                 <span><img class="icon" src="assets/img/users-icon.svg" class="marine-icons"></span>
+                  <h3 class="tx-normal tx-poppins font-weight-bold mg-b-0 lh-1 white">125</h3>
+                </div>
+              </div>
+            </div><!-- col -->
+            <div class="col-sm-6 col-lg-2 mg-t-10 mg-sm-t-0">
+              <div class="card card-body p-3">
+              <!-- <div class="card card-body"> Other type of Card Body -->
+                <h6 class="tx-uppercase tx-10 tx-spacing-1 tx-color-02 tx-semibold mg-b-8 tx-right white">INITIATED REQUESTS</h6>
+                <div class="d-flex d-lg-block d-xl-flex align-items-end justify-content-between">
+                  <span><img class="icon" src="assets/img/icon_initiated.svg" class="marine-icons"></span>
+                  <h3 class="tx-normal tx-poppins font-weight-bold mg-b-0 lh-1 white">2</h3>
+                </div>
+              </div>
+            </div><!-- col -->
+            <div class="col-sm-6 col-lg-2 mg-t-10 mg-lg-t-0">
+              <div class="card card-body p-3">
+                <h6 class="tx-uppercase tx-10 tx-spacing-1 tx-color-02 tx-semibold mg-b-8 tx-right white">COMPLETED</h6>
+                <div class="d-flex d-lg-block d-xl-flex align-items-end justify-content-between">
+                  <span><img class="icon" src="assets/img/icon_completed.svg" class="marine-icons"></span>
+                  <h3 class="tx-normal tx-poppins font-weight-bold mg-b-0 lh-1 white">3</h3>
+                </div>
+              </div>
+            </div><!-- col -->
+            <div class="col-sm-6 col-lg-2 mg-t-10 mg-lg-t-0">
+              <div class="card card-body p-3">
+                <h6 class="tx-uppercase tx-10 tx-spacing-1 tx-color-02 tx-semibold mg-b-8 tx-right white">REJECTED</h6>
+                <div class="d-flex d-lg-block d-xl-flex align-items-end justify-content-between">
+                  <span><img class="icon" src="assets/img/icon_rejected.svg" class="marine-icons"></span>
+                  <h3 class="tx-normal tx-poppins font-weight-bold mg-b-0 lh-1 white">0</h3>
+                </div>
+              </div>
+            </div><!-- col -->
+            <div class="col-sm-6 col-lg-2 mg-t-10 mg-lg-t-0">
+              <div class="card card-body p-3">
+                <h6 class="tx-uppercase tx-10 tx-spacing-1 tx-color-02 tx-semibold mg-b-8 tx-right white">ASSIGNED TO TEAM</h6>
+                <div class="d-flex d-lg-block d-xl-flex align-items-end justify-content-between">
+                  <span><img class="icon" src="assets/img/icon_team.svg" class="marine-icons"></span>
+                  <h3 class="tx-normal tx-poppins font-weight-bold mg-b-0 lh-1 white">30</h3>
+                </div>
+              </div>
+            </div><!-- col -->
+            <div class="col-sm-6 col-lg-2 mg-t-10 mg-lg-t-0">
+              <div class="card card-body p-3">
+                <h6 class="tx-uppercase tx-10 tx-spacing-1 tx-color-02 tx-semibold mg-b-8 tx-right white">TREATED REQUESTS</h6>
+                <div class="d-flex d-lg-block d-xl-flex align-items-end justify-content-between">
+                  <span><img class="icon" src="assets/img/icon_check_circle.svg" class="marine-icons"></span>
+                  <h3 class="tx-normal tx-poppins font-weight-bold mg-b-0 lh-1 white">12445</h3>
+                </div>
+              </div>
+            </div><!-- col -->
+
+          <div class="col-lg-8 col-xl-7 mg-t-10">
+            <div class="card">
+              <div class="card-header pd-y-20 d-md-flex align-items-center justify-content-between">
+                <h6 class="mg-b-0 tx-uppercase tx-15 tx-semibold white">Responsiveness Trend</h6>
+              </div><!-- card-header -->
+              <div class="card-body pos-relative pd-0">
+
+                <!-- Line Chart End -->
+                <div class="line-chart" style="width:100%; padding:20px;">
+                  <div class="aspect-ratio">
+                    <canvas id="chart"></canvas>
+                  </div>
+                </div>
+                <!-- Line Chart End -->
+
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-xl-5 mg-t-10">
+            <div class="card">
+              <div class="card-header pd-y-20 d-md-flex align-items-center justify-content-between">
+                <h6 class="mg-b-0 tx-uppercase tx-15 tx-semibold white">Responsiveness Meter</h6>
+              </div><!-- card-header -->
+              <div class="card-body pos-relative pd-0">
+                <div class="d-flex d-lg-block d-xl-flex align-items-center justify-content-between holder-pie">
+                  <div class="p-1 progress-holder">
+                    <!-- Progress Chart Start -->
+                    <div class="progress-circle over50 p50">
+                      <span>50%</span>
+                      <div class="left-half-clipper">
+                        <div class="first50-bar"></div>
+                        <div class="value-bar"></div>
+                      </div>
+                    </div>
+                    <!-- Progress Chart End -->
+                  </div>
+                  <div class="p-3 progress-copy white">
+                    <h6 class="font-weight-bold white tx-uppercase">Review</h6>
+                    <span class="tx-11">
+                      Good job this week George, you had a performance increase of but there is room for improvement.
+                      Cheers to a better week.
+                    </span>
+                  </div>
+                </div>
+                <div class="d-flex d-lg-block d-xl-flex align-items-center justify-content-around mg-b-20">
+                  <div class="p-1 px-3 bg-success rounded-2 tx-uppercase tx-10">Good</div>
+                  <div class="p-1 px-3 bg-warning rounded-2 tx-uppercase tx-10">Average</div>
+                  <div class="p-1 px-3 bg-danger rounded-2 tx-uppercase tx-10">Poor</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+            <div class="col-lg-12 col-xl-12 mg-t-10">
+              <div class="border p-4 rounded dark-bg-1">
+                <h6 class="tx-spacing--1 tx-20 mg-t-0 mg-b-20 tx-uppercase white">Request</h6>
+                <div class="rounded dark-bg-1">
+                  <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+                    <li class="nav-item">
+                      <a class="nav-link active tx-uppercase00 marine-tab-text tx-12" id="home-tab" data-toggle="tab"
+                        href="#home" role="tab" aria-controls="home" aria-selected="true">Initiated<span
+                          class="mg-l-5 badge badge-danger">5</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link marine-tab-text" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
+                        aria-controls="profile" aria-selected="false">Pending <span
+                          class="mg-l-5 badge badge-danger">7</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link marine-tab-text" id="contact-tab" data-toggle="tab" href="#contact" role="tab"
+                        aria-controls="contact" aria-selected="false">Rejected<span
+                          class="mg-l-5 badge badge-danger">22</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link marine-tab-text" id="contact-tab2" data-toggle="tab" href="#contact2"
+                        role="tab" aria-controls="contact2" aria-selected="false">Approved<span
+                          class="mg-l-5 badge badge-danger">19</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link marine-tab-text" id="contact-tab3" data-toggle="tab" href="#contact3"
+                        role="tab" aria-controls="contact3" aria-selected="false">Incoming <span
+                          class="mg-l-5 badge badge-danger">34</span></a>
+                    </li>
+                  </ul>
+                
+                
+                <div class="tab-content bd bd-gray-300 bd-t-0 pd-20" id="myTabContent">
+                  
+                  <div class="tab-pane fade active show" id="home" role="tabpanel" aria-labelledby="home-tab">
+                    <div data-label="Example" class="df-example demo-table table-responsive">
+                      <table id="initiated" class="table">
+                        <thead>
+                          <tr>
+                            <th class="wd-20p">Form</th>
+                            <th class="wd-25p">Pending Approval</th>
+                            <th class="wd-20p">Time Received</th>
+                            <th class="wd-15p">Time Elapsed</th>
+                            <th class="wd-20p">Approve reject</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><strong>ACCESS AUTHORISATION FORM</strong></td>
+                            <td><strong>meyou.everybody@ubagroup.com</strong></td>
+                            <td><span><strong>15 Jan 2020</span> | <span>11:45:09</span></strong></td>
+                            <td><span><strong>11:45:09</strong></span></td>
+                            <td>
+                              <button type="button" class="btn btn-outline-secondary mr-2"><i
+                                  data-feather="refresh-cw"></i></button>
+                              <button type="button" class="btn btn-outline-secondary mr-2"><i
+                                  data-feather="eye"></i></button>
+                              <button type="button" class="btn btn-outline-secondary mr-2"><i
+                                  data-feather="clock"></i></button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>UBA ACADEMY OPERATING EXPENSES APPROVAL AND PAYMENT REQUEST FORM</td>
+                            <td><span>meyou.everybody@ubagroup.com</span> <span>meyou.everybody@ubagroup.com</span></td>
+                            <td><span>15 Jan 2020</span> | <span>11:45:09</span></td>
+                            <td><span>11:39:09</span></td>
+                            <td>
+                              <button type="button" class="btn btn-outline-secondary mr-2"><i
+                                  data-feather="refresh-cw"></i></button>
+                              <button type="button" class="btn btn-outline-secondary mr-2"><i
+                                  data-feather="eye"></i></button>
+                              <button type="button" class="btn btn-outline-secondary mr-2"><i
+                                  data-feather="clock"></i></button>
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td>3RD PARTY REMOTE ACCESS ENROLLMENT FORM</td>
+                            <td>meyou.everybody@ubagroup.com</td>
+                            <td><span>17 Jan 2020</span> | <span>11:45:09</span></td>
+                            <td><span>15:45:09</span></td>
+                            <td>
+                              <button type="button" class="btn btn-outline-secondary mr-2"><i
+                                  data-feather="refresh-cw"></i></button>
+                              <button type="button" class="btn btn-outline-secondary mr-2"><i
+                                  data-feather="eye"></i></button>
+                              <button type="button" class="btn btn-outline-secondary mr-2"><i
+                                  data-feather="clock"></i></button>
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td>3RD PARTY REMOTE ACCESS ENROLLMENT FORM</td>
+                            <td>meyou.everybody@ubagroup.com</td>
+                            <td><span>20 Jan 2020</span> | <span>11:45:09</span></td>
+                            <td><span>17:45:09</span></td>
+                            <td>
+                              <button type="button" class="btn btn-outline-secondary mr-2"><i
+                                  data-feather="refresh-cw"></i></button>
+                              <button type="button" class="btn btn-outline-secondary mr-2"><i
+                                  data-feather="eye"></i></button>
+                              <button type="button" class="btn btn-outline-secondary mr-2"><i
+                                  data-feather="clock"></i></button>
+                            </td>
+                          </tr>
+
+                        </tbody>
+                      </table>
+                    </div><!-- df-example -->
+                  </div>
+
+                  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                    <div data-label="Example" class="df-example demo-table table-responsive">
+                      <table id="pending" class="table">
+                        <thead>
+                          <tr>
+                            <th class="wd-20p">Form</th>
+                            <th class="wd-25p">Initiated By</th>
+                            <th class="wd-20p">Time Received</th>
+                            <th class="wd-15p">Time Elapsed</th>
+                            <th class="wd-20p">Approve reject</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><strong>Reference Letter with Balance (Nigeria)</strong></td>
+                            <td><strong>meyou.everybody</strong></td>
+                            <td><span><strong>15 Jan 2020</span> | <span>11:45:09</span></strong></td>
+                            <td><span><strong>11:45:09</strong></span></td>
+                            <td>
+                              <button type="button" class="btn btn-outline-secondary mr-2"><i
+                                  data-feather="refresh-cw"></i></button>
+                              <button type="button" class="btn btn-outline-secondary mr-2"><i
+                                  data-feather="eye"></i></button>
+                              <button type="button" class="btn btn-outline-secondary mr-2"><i
+                                  data-feather="clock"></i></button>
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td>Reference Letter (Nigeria)</td>
+                            <td>meyou.everybody</td>
+                            <td><span>15 Jan 2020</span> | <span>11:45:09</span></td>
+                            <td><span>11:45:09</span></td>
+                            <td>
+                              <button type="button" class="btn btn-outline-secondary mr-2"><i
+                                  data-feather="refresh-cw"></i></button>
+                              <button type="button" class="btn btn-outline-secondary mr-2"><i
+                                  data-feather="eye"></i></button>
+                              <button type="button" class="btn btn-outline-secondary mr-2"><i
+                                  data-feather="clock"></i></button>
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td>IT CHANGE MANAGEMENT FORM</td>
+                            <td>meyou.everybody</td>
+                            <td><span>15 Jan 2020</span> | <span>11:45:09</span></td>
+                            <td><span>11:45:09</span></td>
+                            <td>
+                              <button type="button" class="btn btn-outline-secondary mr-2 mb-1"><i
+                                  data-feather="refresh-cw"></i></button>
+                              <button type="button" class="btn btn-outline-secondary mr-2 mb-1"><i
+                                  data-feather="eye"></i></button>
+                              <button type="button" class="btn btn-outline-secondary mr-2 mb-1"><i
+                                  data-feather="clock"></i></button>
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td>UAT SIGN-OFF/GO LIVE FORM</td>
+                            <td>meyou.everybody</td>
+                            <td><span>15 Jan 2020</span> | <span>11:45:09</span></td>
+                            <td><span>11:45:09</span></td>
+                            <td>
+                              <button type="button" class="btn btn-outline-secondary mr-2 mb-1"><i
+                                  data-feather="refresh-cw"></i></button>
+                              <button type="button" class="btn btn-outline-secondary mr-2 mb-1"><i
+                                  data-feather="eye"></i></button>
+                              <button type="button" class="btn btn-outline-secondary mb-1"><i
+                                  data-feather="clock"></i></button>
+                            </td>
+                          </tr>
+
+                        </tbody>
+                      </table>
+                    </div><!-- df-example -->
+                  </div>
+
+                  <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                    <div data-label="Example" class="df-example demo-table">
+                      <table id="rejected" class="table">
+                        <thead>
+                          <tr>
+                            <th class="wd-20p">Request</th>
+                            <th class="wd-25p">Initiated By</th>
+                            <th class="wd-25p">Rejected By</th>
+                            <th class="wd-20p">Date Rejected</th>
+                            <th class="wd-15p">Date Acted On</th>
+                            <th class="wd-20p">Comments</th>
+                            <th class="wd-20p">Action</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+
+                          <tr>
+                            <td><strong>Reference Letter with Balance (Nigeria)</strong></td>
+                            <td><strong>meyou.everybody</strong></td>
+                            <td><strong>meyou.everybody</strong></td>
+                            <td><span><strong>15 Jan 2020</span> | <span>11:45:09</span></strong></td>
+                            <td><span><strong>11:45:09</strong></span></td>
+                            <td><strong>Lorem ipsum,</strong></td>
+                            <td>
+
+                              <button type="button" class="btn btn-outline-secondary btn-icon mr-2 mb-1">
+                                <i data-feather="refresh-cw"></i>
+                              </button>
+
+                              <button type="button" class="btn btn-outline-secondary btn-icon mb-1">
+                                <i data-feather="refresh-cw"></i>
+                              </button>
+
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td>Reference Letter with Balance (Nigeria)</td>
+                            <td>meyou.everybody</td>
+                            <td>meyou.everybody</td>
+                            <td><span>15 Jan 2020</span> | <span>11:45:09</span></td>
+                            <td><span>11:45:09</span></td>
+                            <td>Lorem ipsum,</td>
+                            <td>
+
+                              <button type="button" class="btn btn-outline-secondary btn-icon mr-2 mb-1">
+                                <i data-feather="refresh-cw"></i>
+                              </button>
+
+                              <button type="button" class="btn btn-outline-secondary btn-icon mb-1">
+                                <i data-feather="refresh-cw"></i>
+                              </button>
+
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td>Reference Letter with Balance (Nigeria)</td>
+                            <td>meyou.everybody</td>
+                            <td>meyou.everybody</td>
+                            <td><span>15 Jan 2020</span> | <span>11:45:09</span></td>
+                            <td><span>11:45:09</span></td>
+                            <td>Lorem ipsum,</td>
+                            <td>
+
+                              <button type="button" class="btn btn-outline-secondary btn-icon mr-2 mb-1">
+                                <i data-feather="refresh-cw"></i>
+                              </button>
+
+                              <button type="button" class="btn btn-outline-secondary btn-icon mb-1">
+                                <i data-feather="refresh-cw"></i>
+                              </button>
+
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Reference Letter with Balance (Nigeria)</td>
+                            <td>meyou.everybody</td>
+                            <td>meyou.everybody</td>
+                            <td><span>15 Jan 2020</span> | <span>11:45:09</span></td>
+                            <td><span>11:45:09</span></td>
+                            <td>Lorem ipsum,</td>
+                            <td>
+
+                              <button type="button" class="btn btn-outline-secondary btn-icon mr-2 mb-1">
+                                <i data-feather="refresh-cw"></i>
+                              </button>
+
+                              <button type="button" class="btn btn-outline-secondary btn-icon mb-1">
+                                <i data-feather="refresh-cw"></i>
+                              </button>
+
+                            </td>
+                          </tr>
+
+
+                        </tbody>
+                      </table>
+                    </div><!-- df-example -->
+                  </div>
+
+                  <div class="tab-pane fade" id="contact2" role="tabpanel" aria-labelledby="contact-tab2">
+                    <div data-label="Example" class="df-example demo-table">
+                      <table id="approved" class="table">
+                        <thead>
+                          <tr>
+                            <th class="wd-20p">Form</th>
+                            <th class="wd-25p">Initiated By</th>
+                            <th class="wd-25p">Time Received</th>
+                            <th class="wd-20p">Approval Duration(hrs)</th>
+                            <th class="wd-15p">Time Approved</th>
+                            <th class="wd-20p">View Form</th>
+
+                          </tr>
+                        </thead>
+                        <tbody>
+
+                          <tr>
+                            <td><strong>IT CHANGE MANAGEMENT FORM</strong></td>
+                            <td><strong>meyou.everybody</strong></td>
+                            <td><strong><span>15 Jan 2020</span> | <span>11:45:09</span></strong></td>
+                            <td><strong><span>11:45:09</span></strong></td>
+                            <td><strong><span>15 Jan 2020</span> | <span>11:45:09</span></strong></td>
+
+                            <td>
+
+                              <button type="button" class="btn btn-outline-secondary btn-icon mr-2 mb-1">
+                                <i data-feather="refresh-cw"></i>
+                              </button>
+
+                              <button type="button" class="btn btn-outline-secondary btn-icon mr-2 mb-1">
+                                <i data-feather="refresh-cw"></i>
+                              </button>
+                              <button type="button" class="btn btn-outline-secondary btn-icon">
+                                <i data-feather="refresh-cw"></i>
+                              </button>
+
+
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td>IT CHANGE MANAGEMENT FORM</td>
+                            <td>meyou.everybody</td>
+                            <td><span>15 Jan 2020</span> | <span>11:45:09</span></td>
+                            <td><span>11:45:09</span></td>
+                            <td><span>15 Jan 2020</span> | <span>11:45:09</span></td>
+
+                            <td>
+
+                              <button type="button" class="btn btn-outline-secondary btn-icon mr-2 mb-1">
+                                <i data-feather="refresh-cw"></i>
+                              </button>
+
+                              <button type="button" class="btn btn-outline-secondary btn-icon mr-2 mb-1">
+                                <i data-feather="refresh-cw"></i>
+                              </button>
+                              <button type="button" class="btn btn-outline-secondary btn-icon">
+                                <i data-feather="refresh-cw"></i>
+                              </button>
+
+
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>IT CHANGE MANAGEMENT FORM</td>
+                            <td>meyou.everybody</td>
+                            <td><span>15 Jan 2020</span> | <span>11:45:09</span></td>
+                            <td><span>11:45:09</span></td>
+                            <td><span>15 Jan 2020</span> | <span>11:45:09</span></td>
+
+                            <td>
+
+                              <button type="button" class="btn btn-outline-secondary btn-icon mr-2 mb-1">
+                                <i data-feather="refresh-cw"></i>
+                              </button>
+
+                              <button type="button" class="btn btn-outline-secondary btn-icon mr-2 mb-1">
+                                <i data-feather="refresh-cw"></i>
+                              </button>
+                              <button type="button" class="btn btn-outline-secondary btn-icon">
+                                <i data-feather="refresh-cw"></i>
+                              </button>
+
+
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>IT CHANGE MANAGEMENT FORM</td>
+                            <td>meyou.everybody</td>
+                            <td><span>15 Jan 2020</span> | <span>11:45:09</span></td>
+                            <td><span>11:45:09</span></td>
+                            <td><span>15 Jan 2020</span> | <span>11:45:09</span></td>
+
+                            <td>
+
+                              <button type="button" class="btn btn-outline-secondary btn-icon mr-2 mb-1">
+                                <i data-feather="refresh-cw"></i>
+                              </button>
+
+                              <button type="button" class="btn btn-outline-secondary btn-icon mr-2 mb-1">
+                                <i data-feather="refresh-cw"></i>
+                              </button>
+                              <button type="button" class="btn btn-outline-secondary btn-icon mb-1">
+                                <i data-feather="refresh-cw"></i>
+                              </button>
+
+
+                            </td>
+                          </tr>
+
+
+
+                        </tbody>
+                      </table>
+                    </div><!-- df-example -->
+                  </div>
+
+                  <div class="tab-pane fade" id="contact3" role="tabpanel" aria-labelledby="contact-tab3">
+                    <div data-label="Example" class="df-example demo-table">
+                      <table id="incoming" class="table">
+                        <thead>
+                          <tr>
+                            <th class="wd-20p">Form</th>
+                            <th class="wd-25p">Date</th>
+                            <th class="wd-25p">Status</th>
+                            <th class="wd-20p">Action</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+
+                          <tr>
+                            <td><strong>IT CHANGE MANAGEMENT FORM</strong></td>
+                            <td><strong>meyou.everybody</strong></td>
+                            <td><button type="button" class="btn btn-xs btn-success">Completed</button></td>
+                            <td>
+                              <button type="button" class="btn btn-outline-secondary btn-icon mr-2 mb-1">
+                                <i data-feather="refresh-cw"></i>
+                              </button>
+
+                              <button type="button" class="btn btn-outline-secondary btn-icon mr-2 mb-1">
+                                <i data-feather="refresh-cw"></i>
+                              </button>
+                              <button type="button" class="btn btn-outline-secondary btn-icon mb-1">
+                                <i data-feather="refresh-cw"></i>
+                              </button>
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td><strong>IT CHANGE MANAGEMENT FORM</strong></td>
+                            <td><strong>meyou.everybody</strong></td>
+                            <td><button type="button" class="btn btn-xs btn-warning">Pending</button></td>
+                            <td>
+                              <button type="button" class="btn btn-outline-secondary btn-icon mr-2 mb-1">
+                                <i data-feather="refresh-cw"></i>
+                              </button>
+
+                              <button type="button" class="btn btn-outline-secondary btn-icon mr-2 mb-1">
+                                <i data-feather="refresh-cw"></i>
+                              </button>
+                              <button type="button" class="btn btn-outline-secondary btn-icon mb-1">
+                                <i data-feather="refresh-cw"></i>
+                              </button>
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td><strong>IT CHANGE MANAGEMENT FORM</strong></td>
+                            <td><strong>meyou.everybody</strong></td>
+                            <td><button type="button" class="btn btn-xs btn-danger">Rejected</button></td>
+                            <td>
+                              <button type="button" class="btn btn-outline-secondary btn-icon mr-2 mb-1">
+                                <i data-feather="refresh-cw"></i>
+                              </button>
+
+                              <button type="button" class="btn btn-outline-secondary btn-icon mr-2 mb-1">
+                                <i data-feather="refresh-cw"></i>
+                              </button>
+                              <button type="button" class="btn btn-outline-secondary btn-icon mb-1">
+                                <i data-feather="refresh-cw"></i>
+                              </button>
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td><strong>IT CHANGE MANAGEMENT FORM</strong></td>
+                            <td><strong>meyou.everybody</strong></td>
+                            <td><button type="button" class="btn btn-xs btn-info">Idle</button></td>
+                            <td>
+                              <button type="button" class="btn btn-outline-secondary btn-icon mr-2 mb-1">
+                                <i data-feather="refresh-cw"></i>
+                              </button>
+
+                              <button type="button" class="btn btn-outline-secondary btn-icon mr-2 mb-1">
+                                <i data-feather="refresh-cw"></i>
+                              </button>
+                              <button type="button" class="btn btn-outline-secondary btn-icon">
+                                <i data-feather="refresh-cw"></i>
+                              </button>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div><!-- df-example -->
+                  </div>
+
+                </div>
+                </div>
+              </div>
+            </div>
+
+          </div><!-- row -->
+        </div><!-- container -->
+      </div>
+    </div>
+
+    <script src="assets/lib/jquery/jquery.min.js"></script>
+    <script src="assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/lib/feather-icons/feather.min.js"></script>
+    <script src="assets/lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+
+    <script src="assets/lib/prismjs/prism.js"></script>
+    <script src="assets/lib/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="assets/lib/datatables.net-dt/js/dataTables.dataTables.min.js"></script>
+    <script src="assets/lib/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="assets/lib/datatables.net-responsive-dt/js/responsive.dataTables.min.js"></script>
+
+    <script src="assets/lib/chart.js/Chart1.min.js"></script>
+    <script src="assets/lib/chart.js/utils.js"></script>
+
+    <script src="assets/js/dashforge.js"></script>
+    <script src="assets/js/dashforge.aside.js"></script>
+    <script src="assets/js/dashforge.sampledata.js"></script>
+
+    <!-- append theme customizer -->
+    <script src="assets/lib/js-cookie/js.cookie.js"></script>
+    <script src="assets/js/dashforge.settings.js"></script>
+
+    <script>
+      $('#pending,#initiated,#rejected,#approved,#incoming').DataTable({
+        responsive: true,
+        language: {
+          searchPlaceholder: 'Search...',
+          sSearch: '',
+          lengthMenu: '_MENU_ items/page',
+          columnDefs: [{
+              responsivePriority: 1,
+              targets: 0
+            },
+            {
+              responsivePriority: 2,
+              targets: -1
+            }
+          ]
+        }
+      });
+    </script>
+    <script>
+      var chart = document.getElementById('chart').getContext('2d'),
+        gradient = chart.createLinearGradient(0, 0, 0, 450);
+
+      gradient.addColorStop(0, 'rgba(237, 21,0, 100)');
+      gradient.addColorStop(0.5, 'rgba(255, 0, 0, 0.01)');
+      gradient.addColorStop(1, 'rgba(255, 255, 255, 0)');
+
+
+      var data = {
+        labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+        datasets: [{
+          label: 'Responsiveness',
+          backgroundColor: gradient,
+          pointBackgroundColor: 'white',
+          borderWidth: 2,
+          borderColor: '#D70900',
+          data: [64, 25, 55, 45, 54]
+        }]
+      };
+
+
+      var options = {
+        responsive: true,
+        maintainAspectRatio: true,
+        animation: {
+          easing: 'easeInOutQuad',
+          duration: 520
+        },
+        scales: {
+          xAxes: [{
+            gridLines: {
+              color: 'rgba(200, 200, 200, 0.1)',
+              lineWidth: 1
+            }
+          }],
+          yAxes: [{
+            gridLines: {
+              color: 'rgba(200, 200, 200, 0.1)',
+              lineWidth: 1
+            }
+          }]
+        },
+        elements: {
+          line: {
+            tension: 0.4
+          }
+        },
+        legend: {
+          display: true
+        },
+        point: {
+          backgroundColor: 'white'
+        },
+        tooltips: {
+          titleFontFamily: 'Open Sans',
+          backgroundColor: 'rgba(0,0,0,0.3)',
+          titleFontColor: 'red',
+          caretSize: 5,
+          cornerRadius: 2,
+          xPadding: 10,
+          yPadding: 10
+        }
+      };
+
+
+      var chartInstance = new Chart(chart, {
+        type: 'line',
+        data: data,
+        options: options
+      });
+
+      // progressbar.js@1.0.0 version is used
+      // Docs: http://progressbarjs.readthedocs.org/en/1.0.0/
+
+      var bar = new ProgressBar.Circle(progresscontainer, {
+        color: '#FFEA82',
+        trailColor: '#f4f4f4',
+        trailWidth: 6,
+        duration: 1400,
+        easing: 'bounce',
+        strokeWidth: 6,
+        from: {
+          color: '#FFEA82',
+          a: 0
+        },
+        to: {
+          color: '#ED6A5A',
+          a: 1
+        },
+        // Set default step function for all animate calls
+        step: function (state, circle) {
+          circle.path.setAttribute('stroke', state.color);
+        }
+      });
+
+      bar.animate(0.77); // Number from 0.0 to 1.0
+    </script>
+  </body>
+</html>

@@ -1,0 +1,238 @@
+/* Custom Background design */
+.spmp-bg
+{
+    background: url(../img/dark-img-home-1.jpg) no-repeat center center fixed !important;
+    -webkit-background-size: cover !important;
+    -moz-background-size: cover !important;
+    -o-background-size: cover !important;
+    background-size: cover !important;
+}
+.app-title {
+    line-height: 12px;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+}
+/* .content-body {
+    background-color: #fafafa !important;
+} */
+
+@media (max-width: 576px) {
+    .mg-l-125 {margin-left: 0px !important;}
+
+    .navbar-header .navbar-right {
+        position: absolute;
+        right: 0;
+    }
+    .uba-logo {
+        float: right;
+    }
+
+    .dataTables_wrapper .dataTables_filter input {
+        width:100%  !important;
+    }
+
+}
+
+/* Custom footer design */
+.footer
+{
+    background: none !important;
+    color: white !important;
+    border-top: none !important;
+}
+
+.navbar-header {
+    background-color: none !important;
+    border-bottom: none !important;
+}
+
+.spmp-logo, .uba-logo
+{
+    width: 60%;
+}
+
+.df-logo
+{
+    color: white !important;
+}
+
+.btn-brand-uba-dark {
+    background-color: #D70900;
+    border-color: #D70900;
+    color: #fff;
+}
+
+.btn-brand-uba-back:hover,
+.btn-brand-uba-dark:focus {
+    background-color: #ED1500;
+    border-color: #ED1500;
+    color: #fff;
+}
+
+.signin-holder
+{
+    border-top: 5px solid #E0E0E0;
+}
+
+.content-search {
+    width: auto;
+}
+
+.table
+{
+    width: 100% !important;
+    font-size: 12px;
+}
+
+table.dataTable thead .sorting_asc,
+.sorting,
+table.dataTable thead .sorting_desc 
+{
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    font-size: 11px !important;
+}
+
+.dataTables_info,
+.dataTables_length {
+    text-transform: uppercase !important;
+    font-size: 11px !important;
+}
+
+.dataTables_wrapper .dataTables_filter input {
+    width: 830px;
+}
+
+.dataTables_wrapper .dataTables_filter input {
+    border-color: none;
+    box-shadow: none;
+    outline: 0 none;
+}
+
+.nav-tabs a {text-transform: uppercase !important; font-size: 11px !important;}
+
+/* Siki Style */
+/* Before I scatter */
+.marine-icons {
+    width: 70%;
+
+}
+
+.marine-active-menu {
+    font-weight: bold;
+}
+
+.marine-tab-text {
+    font-size: 13px;
+}
+
+.marine-borders {
+    border-radius: 5px;
+    -webkit-box-shadow: 0 8px 6px -6px #ddd;
+    -moz-box-shadow: 0 8px 6px -6px #ddd;
+    Submitbox-shadow: 0 8px 6px -6px #ddd;
+    Submitpadding-bottom: 10px;
+}
+
+/* Icon Buttton Starts here  */
+.icon-btn {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #ddd;
+    background: red;
+    border-radius: 25px;
+    overflow: hidden;
+    position: relative;
+    transition: width 0.2s ease-in-out;
+
+    -webkit-box-shadow: 0 8px 6px -6px #666;
+    -moz-box-shadow: 0 8px 6px -6px #666;
+    Submitbox-shadow: 0 8px 6px -6px #666;
+    Submitpadding-bottom: 10px;
+}
+
+.add-btn:hover {
+    width: 120px;
+}
+
+.add-btn::before,
+.add-btn::after {
+    transition: width 0.2s ease-in-out, border-radius 0.2s ease-in-out;
+    content: "";
+    position: absolute;
+    height: 4px;
+    width: 10px;
+    top: calc(50% - 2px);
+    background: white;
+}
+
+.add-btn::after {
+    right: 14px;
+    overflow: hidden;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+.add-btn::before {
+    left: 14px;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+
+.icon-btn:focus {
+    outline: none;
+}
+
+.btn-txt {
+    opacity: 0;
+    transition: opacity 0.2s;
+    color: white;
+}
+
+.add-btn:hover::before,
+.add-btn:hover::after {
+    width: 4px;
+    border-radius: 2px;
+}
+
+.add-btn:hover .btn-txt {
+    opacity: 1;
+}
+
+.add-icon::after,
+.add-icon::before {
+    transition: all 0.2s ease-in-out;
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 2px;
+    top: calc(50% - 10px);
+    background: white;
+    overflow: hidden;
+}
+
+.add-icon::before {
+    left: 22px;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+
+.add-icon::after {
+    right: 22px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+.add-btn:hover .add-icon::before {
+    left: 15px;
+    height: 4px;
+    top: calc(50% - 2px);
+}
+
+.add-btn:hover .add-icon::after {
+    right: 15px;
+    height: 4px;
+    top: calc(50% - 2px);
+}
+
+/* Icon Buttton Ends here  */
