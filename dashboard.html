@@ -429,7 +429,7 @@
                   </div>
 
                   <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-                    <div data-label="Example" class="df-example demo-table">
+                    <div data-label="Example" class="df-example demo-table table-responsive">
                       <table id="rejected" class="table">
                         <thead>
                           <tr>
@@ -530,7 +530,7 @@
                   </div>
 
                   <div class="tab-pane fade" id="contact2" role="tabpanel" aria-labelledby="contact-tab2">
-                    <div data-label="Example" class="df-example demo-table">
+                    <div data-label="Example" class="df-example demo-table table-responsive">
                       <table id="approved" class="table">
                         <thead>
                           <tr>
@@ -647,7 +647,7 @@
                   </div>
 
                   <div class="tab-pane fade" id="contact3" role="tabpanel" aria-labelledby="contact-tab3">
-                    <div data-label="Example" class="df-example demo-table">
+                    <div data-label="Example" class="df-example demo-table table-responsive">
                       <table id="incoming" class="table">
                         <thead>
                           <tr>
@@ -768,7 +768,7 @@
     <script src="assets/js/dashforge.settings.js"></script>
 
     <script>
-      $('#pending,#initiated,#rejected,#approved,#incoming').DataTable({
+      $('#pending,#initiated,#rejected,#approved').DataTable({
         responsive: true,
         language: {
           searchPlaceholder: 'Search...',
@@ -786,6 +786,25 @@
         }
       });
     </script>
+        <script>
+          $('#incoming').DataTable({
+            responsive: true,
+            language: {
+              searchPlaceholder: 'Search...',
+              sSearch: '',
+              lengthMenu: '_MENU_ items/page',
+              columnDefs: [{
+                  responsivePriority: 1,
+                  targets: 0
+                },
+                {
+                  responsivePriority: 2,
+                  targets: -1
+                }
+              ]
+            }
+          });
+        </script>
     <script>
       var chart = document.getElementById('chart').getContext('2d'),
         gradient = chart.createLinearGradient(0, 0, 0, 450);
