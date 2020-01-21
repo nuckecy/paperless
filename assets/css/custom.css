@@ -532,7 +532,12 @@ table.dataTable tbody tr.odd {
     flex-shrink: 0;
     font-family: -apple-system, BlinkMacSystemFont, "Inter UI", Roboto, sans-serif;
     color: #ffffff;
-    border: 2px solid #ff0000;
-    background: #ff0000;
+    border: 2px solid #e91200;
+    background: #e91200;
     border-radius: 100%;
+}
+
+.plus-btn svg{
+    height: 44px;
+    width: 44px;
 }
