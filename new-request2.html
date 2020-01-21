@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="SPMP - Smart Process Management Platform">
+    <title>SPMP - Smart Process Management Platform</title>
+
+    <!-- Required External CSS -->
+    <link href="assets/lib/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="assets/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+    <link href="assets/lib/jqvmap/jqvmap.min.css" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+
+    <link href="assets/lib/prismjs/themes/prism-vs.css" rel="stylesheet">
+    <link href="assets/lib/datatables.net-dt/css/jquery.dataTables.min.css" rel="stylesheet">
+    <link href="assets/lib/datatables.net-responsive-dt/css/responsive.dataTables.min.css" rel="stylesheet">
+    <link href="assets/lib/select2/css/select2.min.css" rel="stylesheet">
+
+    <!-- DashForge CSS -->
+    <link rel="stylesheet" href="assets/css/dashforge.css">
+    <link rel="stylesheet" href="assets/css/dashforge.dashboard.css">
+
+    <!-- Page CSS -->
+    <link rel="stylesheet" href="assets/css/dashforge.css">
+    <link rel="stylesheet" href="assets/css/dashforge.dashboard.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel="stylesheet" href="assets/css/newRequest2.css">
+    <link rel="stylesheet" href="assets/css/skin.dark.css">
+  </head>
+  <body>
+
+    <aside class="aside aside-fixed">
+      <div class="aside-header">
+        <a href="index.html" class="aside-logo">
+          <div><img class="uba-logo" alt="SPMP Logo Dark" src="assets/img/spmp_logo_dark.svg"></div>
+        </a>
+        <a href="" class="aside-menu-link">
+          <i data-feather="menu"></i>
+          <i data-feather="x"></i>
+        </a>
+      </div>
+      <div class="aside-body">
+        <div class="aside-loggedin">
+          <div class="d-flex align-items-center justify-content-start">
+            <a href="" class="avatar"><img src="assets/img/boy.svg" class="rounded-circle" alt=""></a>
+            <div class="aside-alert-link">
+              <a href="" class="white" data-toggle="tooltip" title="Sign out"><i data-feather="log-out"></i></a>
+            </div>
+          </div>
+          <div class="aside-loggedin-user">
+            <a href="#loggedinMenu" class="d-flex align-items-center justify-content-between mg-b-2"
+              data-toggle="collapse">
+              <h6 class="tx-semibold mg-b-0 white">Katherine Pechon</h6>
+            </a>
+            <p class="tx-color-03 tx-12 mg-b-0">Administrator</p>
+          </div>
+        </div>
+        <ul class="nav nav-aside">
+
+          <li class="nav-item active"><a href="dashboard-one.html" class="nav-link"><i data-feather="grid"></i> <span
+                class="marine-active-menu">Dashboard</span></a></li>
+          <li class="nav-item with-sub">
+            <a href="" class="nav-link"><i data-feather="clipboard"></i> <span>Requests</span></a>
+            <ul>
+
+              <li><span></span><a href="page-profile-view.html">New Request</a></li>
+              <li><a href="page-connections.html">My Form Request</a></li>
+              <li><a href="page-groups.html">Process Approval Request</a></li>
+
+            </ul>
+          </li>
+          <li class="nav-item"><a href="dashboard-two.html" class="nav-link"><i data-feather="archive"></i><span>Process
+                Approval</span></a></li>
+          <li class="nav-item with-sub">
+            <a href="dashboard-two.html" class="nav-link"><i data-feather="activity"></i><span>Report</span></a>
+          </li>
+
+        </ul>
+      </div>
+    </aside>
+
+    <div class="content ht-100v pd-0">
+      <div class="content-header bg-dark-1">
+        <div class="content-search">
+          <p class="app-title tx-color-01 pt-3 white">SMART PROCESS MANAGEMENT PLATFORM</p>
+        </div>
+        <nav class="nav">
+          <div><img class="uba-logo" alt="UBA Logo Dark" src="assets/img/uba_logo_red.svg"></div>
+          <a href="" class="nav-link pt-2 white" data-toggle="tooltip" title="Sign out"><i
+              data-feather="log-out"></i></a>
+        </nav>
+      </div><!-- content-header -->
+
+      <div class="content-body px-5">
+        <div class="container pd-x-0">
+          <div class="d-sm-flex align-items-center justify-content-between mg-b-20 mg-lg-b-25 mg-xl-b-30">
+            <div>
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb breadcrumb-style1 mg-b-10 white">
+                  <li class="breadcrumb-item"><a href="#" class='white'>REQUEST/NEW REQUEST/<span style="color: red;">PROCESS APPROVAL REQUESTS</span></a></li>
+                </ol>
+              </nav>
+              <h4 class="mg-b-0 tx-spacing--1 white font-weight-bold">Add a new Request</h4>
+            </div>
+            
+          </div>
+          <div data-label="Example" class="df-example">
+            <div class="row">
+              <div class="col-sm">
+                <div class="card">
+                  <!-- <div class="card-header tx-medium">Featured</div> -->
+                  <div class="card-body">
+                    <div data-label="Example" class="df-example demo-table">
+                        <table id="example2" class="table white">
+                          <thead>
+                            <tr>
+                              <th class="wd-8p"><span class='ml-3'>S/N</span></th>
+                              <th class="wd-90p">Name of form</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                              <tr>
+                                <td>
+                                  <span class='bg-primary ml-3 table-style'>01
+                                </span>
+                                </td>
+                                <td>
+                                    <b class='tx-14'>3RD PARTY REMOTE ACCESS ENROLLMENT FORM</b class='tx-14'>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <span class='bg-primary ml-3 table-style'>02
+                                </span>
+                                </td>
+                                <td>
+                                    <b class='tx-14'>SECOND LIST</b class='tx-14'>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <span class='bg-primary ml-3 table-style'>03
+                                </span>
+                                </td>
+                                <td>
+                                    <b class='tx-14'>3RD PARTY REMOTE ACCESS ENROLLMENT FORM</b class='tx-14'>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <span class='bg-primary ml-3 table-style'>04
+                                </span>
+                                </td>
+                                <td>
+                                    <b class='tx-14'>SECOND LIST</b class='tx-14'>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <span class='bg-primary ml-3 table-style'>05
+                                </span>
+                                </td>
+                                <td>
+                                    <b class='tx-14'>3RD PARTY REMOTE ACCESS ENROLLMENT FORM</b class='tx-14'>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <span class='bg-primary ml-3 table-style'>06
+                                </span>
+                                </td>
+                                <td>
+                                    <b class='tx-14'>SECOND LIST</b class='tx-14'>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <span class='bg-primary ml-3 table-style'>07
+                                </span>
+                                </td>
+                                <td>
+                                    <b class='tx-14'>3RD PARTY REMOTE ACCESS ENROLLMENT FORM</b class='tx-14'>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <span class='bg-primary ml-3 table-style'>08
+                                </span>
+                                </td>
+                                <td>
+                                    <b class='tx-14'>SECOND LIST</b class='tx-14'>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <span class='bg-primary ml-3 table-style'>09
+                                </span>
+                                </td>
+                                <td>
+                                    <b class='tx-14'>3RD PARTY REMOTE ACCESS ENROLLMENT FORM</b class='tx-14'>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <span class='bg-primary ml-3 table-style'>10
+                                </span>
+                                </td>
+                                <td>
+                                    <b class='tx-14'>3RD PARTY REMOTE ACCESS ENROLLMENT FORM</b class='tx-14'>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <span class='bg-primary ml-3 table-style'>11
+                                </span>
+                                </td>
+                                <td>
+                                    <b class='tx-14'>SECOND LIST</b class='tx-14'>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <span class='bg-primary ml-3 table-style'>12
+                                </span>
+                                </td>
+                                <td>
+                                    <b class='tx-14'>3RD PARTY REMOTE ACCESS ENROLLMENT FORM</b class='tx-14'>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <span class='bg-primary ml-3 table-style'>13
+                                </span>
+                                </td>
+                                <td>
+                                    <b class='tx-14'>SECOND LIST</b class='tx-14'>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <span class='bg-primary ml-3 table-style'>14
+                                </span>
+                                </td>
+                                <td>
+                                    <b class='tx-14'>3RD PARTY REMOTE ACCESS ENROLLMENT FORM</b class='tx-14'>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <span class='bg-primary ml-3 table-style'>15
+                                </span>
+                                </td>
+                                <td>
+                                    <b class='tx-14'>SECOND LIST</b class='tx-14'>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <span class='bg-primary ml-3 table-style'>16
+                                </span>
+                                </td>
+                                <td>
+                                    <b class='tx-14'>3RD PARTY REMOTE ACCESS ENROLLMENT FORM</b class='tx-14'>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <span class='bg-primary ml-3 table-style'>17
+                                </span>
+                                </td>
+                                <td>
+                                    <b class='tx-14'>SECOND LIST</b class='tx-14'>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <span class='bg-primary ml-3 table-style'>18
+                                </span>
+                                </td>
+                                <td>
+                                    <b class='tx-14'>3RD PARTY REMOTE ACCESS ENROLLMENT FORM</b class='tx-14'>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <span class='bg-primary ml-3 table-style'>19
+                                </span>
+                                </td>
+                                <td>
+                                    <b class='tx-14'>3RD PARTY REMOTE ACCESS ENROLLMENT FORM</b class='tx-14'>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <span class='bg-primary ml-3 table-style'>20
+                                </span>
+                                </td>
+                                <td>
+                                    <b class='tx-14'>SECOND LIST</b class='tx-14'>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <span class='bg-primary ml-3 table-style'>21
+                                </span>
+                                </td>
+                                <td>
+                                    <b class='tx-14'>3RD PARTY REMOTE ACCESS ENROLLMENT FORM</b class='tx-14'>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <span class='bg-primary ml-3 table-style'>22
+                                </span>
+                                </td>
+                                <td>
+                                    <b class='tx-14'>SECOND LIST</b class='tx-14'>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <span class='bg-primary ml-3 table-style'>23
+                                </span>
+                                </td>
+                                <td>
+                                    <b class='tx-14'>3RD PARTY REMOTE ACCESS ENROLLMENT FORM</b class='tx-14'>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <span class='bg-primary ml-3 table-style'>24
+                                </span>
+                                </td>
+                                <td>
+                                    <b class='tx-14'>SECOND LIST</b class='tx-14'>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <span class='bg-primary ml-3 table-style'>25
+                                </span>
+                                </td>
+                                <td>
+                                    <b class='tx-14'>3RD PARTY REMOTE ACCESS ENROLLMENT FORM</b class='tx-14'>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <span class='bg-primary ml-3 table-style'>26
+                                </span>
+                                </td>
+                                <td>
+                                    <b class='tx-14'>SECOND LIST</b class='tx-14'>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <span class='bg-primary ml-3 table-style'>27
+                                </span>
+                                </td>
+                                <td>
+                                    <b class='tx-14'>3RD PARTY REMOTE ACCESS ENROLLMENT FORM</b class='tx-14'>
+                                </td>
+                              </tr>
+
+                              
+                          </tbody>
+                        </table>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div><!-- row -->
+          </div><!-- df-example -->
+        </div><!-- container -->
+      </div>
+    </div>
+
+    <script src="assets/lib/jquery/jquery.min.js"></script>
+    <script src="assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/lib/feather-icons/feather.min.js"></script>
+    <script src="assets/lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+
+    <script src="assets/lib/prismjs/prism.js"></script>
+    <script src="assets/lib/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="assets/lib/datatables.net-dt/js/dataTables.dataTables.min.js"></script>
+    <script src="assets/lib/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="assets/lib/datatables.net-responsive-dt/js/responsive.dataTables.min.js"></script>
+
+    <script src="assets/js/dashforge.js"></script>
+    <script src="assets/js/dashforge.aside.js"></script>
+    <script src="assets/js/dashforge.sampledata.js"></script>
+
+    <!-- append theme customizer -->
+    <script src="assets/lib/js-cookie/js.cookie.js"></script>
+    <script src="assets/js/dashforge.settings.js"></script>
+
+    <script>
+      $('#example2').DataTable({
+      responsive: true,
+      language: {
+      searchPlaceholder: 'Search...',
+      sSearch: '',
+      lengthMenu: '_MENU_ items/page',
+      columnDefs: [
+      { responsivePriority: 1, targets: 0 },
+      { responsivePriority: 2, targets: -1 }
+      ]
+      }
+      });
+    </script>
+  </body>
+</html>

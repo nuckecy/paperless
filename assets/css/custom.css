@@ -134,6 +134,25 @@ table.dataTable thead .sorting_desc
     Submitpadding-bottom: 10px;
 }
 
+.dataTables_wrapper .dataTables_paginate .paginate_button.previous,
+.dataTables_wrapper .dataTables_paginate .paginate_button.next 
+{
+    padding: 4px !important;
+    font-size: 10px;
+}
+
+.dataTables_paginate .paginate_button.current,
+.dataTables_wrapper .dataTables_paginate .paginate_button.current:hover,
+.dataTables_wrapper .dataTables_paginate .paginate_button.current:focus 
+{
+    font-size: 10px;
+}
+
+table.dataTable tbody tr.odd {
+    border-left: 5px solid #000 !important;
+}
+
+
 /* Icon Buttton Starts here  */
 .icon-btn {
     width: 50px;
@@ -236,3 +255,251 @@ table.dataTable thead .sorting_desc
 }
 
 /* Icon Buttton Ends here  */
+
+
+/* New Style REVIEW */
+
+.marine-icons {
+    width: 70%;
+
+}
+
+.marine-active-menu {
+    font-weight: bold;
+}
+
+.marine-tab-text {
+    font-size: 13px;
+}
+
+.marine-borders {
+    border-radius: 5px;
+    -webkit-box-shadow: 0 8px 6px -6px #ddd;
+    -moz-box-shadow: 0 8px 6px -6px #ddd;
+    Submitbox-shadow: 0 8px 6px -6px #ddd;
+    Submitpadding-bottom: 10px;
+}
+
+/* Icon Buttton Starts here  */
+.icon-btn {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #ddd;
+    background: red;
+    border-radius: 25px;
+    overflow: hidden;
+    position: relative;
+    transition: width 0.2s ease-in-out;
+
+    -webkit-box-shadow: 0 8px 6px -6px #666;
+    -moz-box-shadow: 0 8px 6px -6px #666;
+    Submitbox-shadow: 0 8px 6px -6px #666;
+    Submitpadding-bottom: 10px;
+}
+
+.add-btn:hover {
+    width: 120px;
+}
+
+.add-btn::before,
+.add-btn::after {
+    transition: width 0.2s ease-in-out, border-radius 0.2s ease-in-out;
+    content: "";
+    position: absolute;
+    height: 4px;
+    width: 10px;
+    top: calc(50% - 2px);
+    background: white;
+}
+
+.add-btn::after {
+    right: 14px;
+    overflow: hidden;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+.add-btn::before {
+    left: 14px;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+
+.icon-btn:focus {
+    outline: none;
+}
+
+.btn-txt {
+    opacity: 0;
+    transition: opacity 0.2s;
+    color: white;
+}
+
+.add-btn:hover::before,
+.add-btn:hover::after {
+    width: 4px;
+    border-radius: 2px;
+}
+
+.add-btn:hover .btn-txt {
+    opacity: 1;
+}
+
+.add-icon::after,
+.add-icon::before {
+    transition: all 0.2s ease-in-out;
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 2px;
+    top: calc(50% - 10px);
+    background: white;
+    overflow: hidden;
+}
+
+.add-icon::before {
+    left: 22px;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+
+.add-icon::after {
+    right: 22px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+.add-btn:hover .add-icon::before {
+    left: 15px;
+    height: 4px;
+    top: calc(50% - 2px);
+}
+
+.add-btn:hover .add-icon::after {
+    right: 15px;
+    height: 4px;
+    top: calc(50% - 2px);
+}
+
+/* Icon Buttton Ends here  */
+
+
+/* DropZone Style Starts here  */
+
+.dropzone,
+.dropzone * {
+    box-sizing: border-box;
+}
+
+.dropzone {
+    position: relative;
+}
+
+.dropzone .dz-preview {
+    position: relative;
+    display: inline-block;
+    width: 120px;
+    margin: 0.5em;
+}
+
+.dropzone .dz-preview .dz-progress {
+    display: none;
+    height: 15px;
+    border: 1px solid #aaa;
+}
+
+.dropzone .dz-preview .dz-progress .dz-upload {
+    display: block;
+    height: 100%;
+    width: 0;
+    background: green;
+}
+
+.dropzone .dz-preview .dz-error-message {
+    color: red;
+    display: none;
+}
+
+.dropzone .dz-preview.dz-error .dz-error-message,
+.dropzone .dz-preview.dz-error .dz-error-mark {
+    display: block;
+}
+
+.dropzone .dz-preview.dz-success .dz-success-mark {
+    display: block;
+}
+
+.dropzone .dz-preview .dz-error-mark,
+.dropzone .dz-preview .dz-success-mark {
+    position: absolute;
+    display: none;
+    left: 30px;
+    top: 30px;
+    width: 54px;
+    height: 58px;
+    left: 50%;
+    margin-left: -27px;
+}
+
+/* The upload box  */
+
+.dropzoneStyle {
+    border: 2px dashed #0087F7;
+    border-radius: 5px;
+    background: white;
+    padding: 20px 15px;
+    height: 350px;
+    overflow-y: scroll;
+}
+
+/* DropZone Style Ends here  */
+
+/* Approval Request Trail Style  starts here */
+.approval-request-trail {
+    background-color: white;
+    border: solid 2px #ddd;
+    border-radius: 5px;
+    margin-left: 20px;
+    padding: 20px;
+
+    color: #666;
+}
+
+.wizard>.actions a,
+.wizard>.actions a:hover,
+.wizard>.actions a:active {
+    display: block;
+    background-color: red;
+    padding: 9px 20px;
+    line-height: 1.539;
+    color: #fff;
+    border-radius: 0.25rem;
+}
+
+/* Approval Request Trail Style  ends here */
+
+/* Add request style  starts here */
+@media (min-width: 576px) {
+    .dataTables_wrapper .dataTables_filter input {
+        width: 50vw;
+    }
+
+    input {
+        margin-right: 10vw;
+    }
+
+}
+
+.table-style {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border-radius: 100%;
+    background-color: #ED1500;
+    color: #fff;
+}
+
+/* Add request style  ends here */

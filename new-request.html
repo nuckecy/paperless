@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="SPMP - Smart Process Management Platform">
+    <title>SPMP - Smart Process Management Platform</title>
+
+    <!-- Required External CSS -->
+    <link href="assets/lib/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="assets/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+    <link href="assets/lib/jqvmap/jqvmap.min.css" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+
+    <link href="assets/lib/prismjs/themes/prism-vs.css" rel="stylesheet">
+    <link href="assets/lib/datatables.net-dt/css/jquery.dataTables.min.css" rel="stylesheet">
+    <link href="assets/lib/datatables.net-responsive-dt/css/responsive.dataTables.min.css" rel="stylesheet">
+    <link href="assets/lib/select2/css/select2.min.css" rel="stylesheet">
+
+    <!-- DashForge CSS -->
+    <link rel="stylesheet" href="assets/css/dashforge.css">
+    <link rel="stylesheet" href="assets/css/dashforge.dashboard.css">
+
+    <!-- Page CSS -->
+    <link rel="stylesheet" href="assets/css/dashforge.css">
+    <link rel="stylesheet" href="assets/css/dashforge.dashboard.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel="stylesheet" href="assets/css/skin.dark.css">
+  
+  </head>
+  <body>
+
+    <aside class="aside aside-fixed">
+      <div class="aside-header">
+        <a href="index.html" class="aside-logo">
+          <div><img class="uba-logo" alt="SPMP Logo Dark" src="assets/img/spmp_logo_dark.svg"></div>
+        </a>
+        <a href="" class="aside-menu-link">
+          <i data-feather="menu"></i>
+          <i data-feather="x"></i>
+        </a>
+      </div>
+      <div class="aside-body">
+        <div class="aside-loggedin">
+          <div class="d-flex align-items-center justify-content-start">
+            <a href="" class="avatar"><img src="assets/img/boy.svg" class="rounded-circle" alt=""></a>
+            <div class="aside-alert-link">
+              <a href="" class="white" data-toggle="tooltip" title="Sign out"><i data-feather="log-out"></i></a>
+            </div>
+          </div>
+          <div class="aside-loggedin-user">
+            <a href="#loggedinMenu" class="d-flex align-items-center justify-content-between mg-b-2"
+              data-toggle="collapse">
+              <h6 class="tx-semibold mg-b-0 white">Katherine Pechon</h6>
+            </a>
+            <p class="tx-color-03 tx-12 mg-b-0">Administrator</p>
+          </div>
+        </div><!-- aside-loggedin -->
+        <ul class="nav nav-aside">
+          <!-- <li class="nav-label">Dashboard</li> -->
+
+          <li class="nav-item active"><a href="dashboard-one.html" class="nav-link"><i data-feather="grid"></i> <span
+                class="marine-active-menu">Dashboard</span></a></li>
+          <li class="nav-item with-sub">
+            <a href="" class="nav-link"><i data-feather="clipboard"></i> <span>Requests</span></a>
+            <ul>
+
+              <li><span></span><a href="page-profile-view.html">New Request</a></li>
+              <li><a href="page-connections.html">My Form Request</a></li>
+              <li><a href="page-groups.html">Process Approval Request</a></li>
+
+            </ul>
+          </li>
+          <li class="nav-item"><a href="dashboard-two.html" class="nav-link"><i data-feather="archive"></i><span>Process
+                Approval</span></a></li>
+          <li class="nav-item with-sub">
+            <a href="dashboard-two.html" class="nav-link"><i data-feather="activity"></i><span>Report</span></a>
+          </li>
+
+        </ul>
+      </div>
+    </aside>
+
+    <div class="content ht-100v pd-0">
+      <div class="content-header bg-dark-1">
+        <div class="content-search">
+          <p class="app-title tx-color-01 pt-3 white">SMART PROCESS MANAGEMENT PLATFORM</p>
+        </div>
+        <nav class="nav">
+          <div><img class="uba-logo" alt="UBA Logo Dark" src="assets/img/uba_logo_red.svg"></div>
+          <a href="" class="nav-link pt-2 white" data-toggle="tooltip" title="Sign out"><i
+              data-feather="log-out"></i></a>
+        </nav>
+      </div><!-- content-header -->
+
+        <div class="content-body">
+          <div class="container pd-x-0">
+            <div class="d-sm-flex align-items-center justify-content-between mg-b-20 mg-lg-b-25 mg-xl-b-30">
+              <div>
+                <nav aria-label="breadcrumb">
+                  <ol class="breadcrumb breadcrumb-style1 mg-b-10 white">
+                    <li class="breadcrumb-item"><a href="#" class='white'>REQUEST/NEW REQUEST/<span style="color: red;">3RD PARTY REMOTE ACCESS ENROLMENT FORM</span></a></li>
+                  </ol>
+                </nav>
+                <h4 class="mg-b-0 tx-spacing--1 white font-weight-bold">New Request</h4>
+              </div>
+              
+              <!-- <div class="d-none d-md-block">
+                <button class="btn btn-sm pd-x-15 btn-white btn-uppercase"><i data-feather="mail" class="wd-10 mg-r-5"></i> Email</button>
+                <button class="btn btn-sm pd-x-15 btn-white btn-uppercase mg-l-5"><i data-feather="printer" class="wd-10 mg-r-5"></i> Print</button>
+                <button class="btn btn-sm pd-x-15 btn-primary btn-uppercase mg-l-5"><i data-feather="file" class="wd-10 mg-r-5"></i> Generate Report</button>
+              </div> -->
+            </div>
+            
+            <div class="card-body dark-bg-1 rounded">
+                <div class="tx-13 mg-b-25" >
+                <div id="wizard1" class=" dark-bg-1">
+                  <h3 class="mg-b-0 tx-uppercase tx-15 tx-semibold white mb-4">Initiate</h3>
+                  <section>
+                    <div class="row row-sm">
+                      <div class="col-md-6 col-xs-12 left">
+                            <form class="white">
+                              <div class="form-group">
+                                  <label>Request name</label>
+                                  <input type="text" name="" class="form-control fields" placeholder="3RD PARTY REMOTE ACCESS ENROLLMENT FORM">
+                              </div>
+
+                              <div class="form-group">
+                                <label for="exampleFormControlTextarea1">Request Description</label>
+                                <textarea class="form-control fields" id="exampleFormControlTextarea1" rows="3"></textarea>
+                              </div>
+                                
+                              <div class="row row-sm">
+                                <div class="form-group col-sm-6">
+                                  <label>Request Originating Department</label>
+                                  <select class="form-control  fields">
+                                    <option>Please select a name</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                  </select>
+                                </div><!-- col -->
+                                <div class="form-group col-sm-6">
+                                  <label>Unit/Department to treat request</label>
+                                  <select class="form-control fields">
+                                    <option>Please select a name</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                  </select>
+                                </div>
+                              </div>
+
+                              <div class="row row-sm">
+                                <div class="form-group col-sm-6 ">
+                                  <label>Email of Alternative Requester</label>
+                                  <input type="text" class="form-control fields" >
+                                  <span class="text-white"><span style="color:red;">*</span><span style="font-style:italic;">Note:Alternative requester has the same rights as the requester</span> </span>
+                                </div><!-- col -->
+                                
+                                <div class="form-group col-sm-6">
+                                  <label>Email of persons/unit to treat request</label>
+                                  <input type="text" class="form-control fields">
+                                </div>
+                              </div>
+                          </form>
+                      </div>
+                      <div class="col-sm-6 col-xs-12 pull-right">
+                        <div id="outside">
+                            <div id="inside" style="cursor: pointer;">
+                                <div id="letsDoThis" class="dropzone dropzoneStyle fields">
+                                    <div class="fallback">
+                                        <input name="file" type="file" multiple />
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                      </div>
+                    </div><!-- form-row -->
+                  </section>
+
+                  <h3 class="mg-b-0 tx-uppercase tx-15 tx-semibold white mb-4">Fill</h3 class="mg-b-0 tx-uppercase tx-15 tx-semibold white mb-4">
+                  <section>
+                    <p class="mg-b-20"></p>
+                    <div class="row row-sm white">
+                      
+                        <div class="form-row">
+                          <div class="form-group col-md-4">
+                            <label for="inputCity">BVN</label>
+                            <input type="text" class="form-control fields" id="inputCity">
+                          </div>
+                          <div class="form-group col-md-4">
+                            <label for="inputState">Account Number</label>
+                            <input type="text" class="form-control fields" id="inputCity">
+                          </div>
+                          <div class="form-group col-md-4">
+                            <label for="inputZip">Name of Applicant</label>
+                            <input type="text" class="form-control fields" id="inputZip">
+                          </div>
+                          <div class="form-group col-md-4">
+                            <label for="inputCity">Employee ID</label>
+                            <input type="text" class="form-control fields" id="inputCity">
+                          </div>
+                          <div class="form-group col-md-4">
+                            <label for="inputState">Date Employed</label>
+                            <input type="text" class="form-control fields" id="inputCity">
+                          </div>
+                          <div class="form-group col-md-4">
+                            <label for="inputZip">Job Grade</label>
+                            <input type="text" class="form-control fields" id="inputZip">
+                          </div>
+                          <div class="form-group col-md-4">
+                            <label for="inputCity">Business Office | SOI ID</label>
+                            <input type="text" class="form-control fields" id="inputCity">
+                          </div>
+                          <div class="form-group col-md-4">
+                            <label for="inputState">Directorate</label>
+                            <input type="text" class="form-control fields" id="inputCity">
+                          </div>
+                          <div class="form-group col-md-4">
+                            <label for="inputZip">Job Function</label>
+                            <input type="text" class="form-control fields" id="inputZip">
+                          </div>
+                        </div>
+                        <div class="form-row">
+                          <div class="form-group col-md-4">
+                            <label for="inputCity">Length of service</label>
+                            <input type="text" class="form-control fields" id="inputCity">
+                          </div>
+                          <div class="form-group col-md-4 col-md-offset-2">
+                            <label for="inputState">Confirm status</label><br>
+                            <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                              <label class="form-check-label" for="inlineRadio1">Yes (Confirmed)</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                              <label class="form-check-label" for="inlineRadio2">No (Not Confirmed)</label>
+                            </div>
+                          </div>
+                          <div>
+
+                            <p>Existing Staff Loan</p>
+                          <div class="form-row">
+
+                          <div class="form-group col-md-3">
+                            <label for="inputCity">Type</label>
+                            <input type="text" class="form-contro fields" id="inputCity">
+                          </div>
+                          <div class="form-group col-md-3">
+                            <label for="inputState">Amount (NGN)</label>
+                            <input type="text" class="form-control fields" id="inputCity">
+                          </div>
+                          <div class="form-group col-md-3">
+                            <label for="inputState">Outstanding Amount (NGN)</label>
+                            <input type="text" class="form-control fields" id="inputZip">
+                          </div>
+                          <div class="form-group col-md-3">
+                            <label for="inputState">Outstanding Amount (NGN)</label>
+                            <input type="text" class="form-control fields" id="inputZip">
+                          </div>
+                            <div class="form-group col-md-3">
+                            <input type="text" class="form-control fields" id="inputCity">
+                          </div>
+                          <div class="form-group col-md-3">
+                              <input type="text" class="form-control fields" id="inputCity">
+                          </div>
+                          <div class="form-group col-md-3">
+                                                  <input type="text" class="form-control fields" id="inputZip">
+                          </div>
+                            <div class="form-group col-md-3">
+                            </label>
+                            <input type="text" class="form-control fields" id="inputCity">
+                          </div>
+                          <div class="form-group col-md-3">
+                                                      <input type="text" class="form-control fields" id="inputCity">
+                          </div>
+                          <div class="form-group col-md-3">
+                                                    <input type="text" class="form-control fields" id="inputZip">
+                          </div>
+                          <div class="form-group col-md-3">
+                                                      <input type="text" class="form-control fields" id="inputCity">
+                          </div>
+                          <div class="form-group col-md-3">
+                                                    <input type="text" class="form-control fields" id="inputZip">
+                          </div>
+                          <div class="form-group col-md-3">
+                                                      <input type="text" class="form-control fields" id="inputCity">
+                          </div>
+                          <div class="form-group col-md-3">
+                                                    <input type="text" class="form-control fields" id="inputZip">
+                          </div>
+                          <div class="form-group col-md-3">
+                                                      <input type="text" class="form-control fields" id="inputCity">
+                          </div>
+                          <div class="form-group col-md-3">
+                                                    <input type="text" class="form-control fields" id="inputZip">
+                          </div>
+                        </div>
+                        <div>
+                          <p>INDICATE TYPE OF LOAN REQUIRED</p>
+                          <div class="form-row">
+
+                          <div class="form-group col-md-4">
+                            <label for="inputCity">Type of Loan</label>
+                            <input type="text" class="form-control fields" id="inputCity">
+                          </div>
+                          <div class="form-group col-md-4">
+                            <label for="inputCity">Yes | No</label>
+                            <input type="text" class="form-control fields" id="inputCity">
+                          </div>
+                          <div class="form-group col-md-4">
+                            <label for="inputCity">Amount</label>
+                            <input type="text" class="form-control fields" id="inputCity">
+                          </div>
+                          <div class="form-group col-md-4">
+                            <input type="text" class="form-control fields" id="inputCity">
+                          </div>
+                          <div class="form-group col-md-4">
+                            <input type="text" class="form-control fields" id="inputCity">
+                          </div>
+                          <div class="form-group col-md-4">
+                            <input type="text" class="form-control fields" id="inputCity">
+                          </div>
+                          <div class="form-group col-md-4">
+                            <input type="text" class="form-control fields" id="inputCity">
+                          </div>
+                          <div class="form-group col-md-4">
+                            <input type="text" class="form-control fields" id="inputCity">
+                          </div>
+                          <div class="form-group col-md-4">
+                            <input type="text" class="form-control fields" id="inputCity">
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="exampleFormControlTextarea1">Purpose</label>
+                                <textarea class="form-control fields" id="exampleFormControlTextarea1" rows="3"></textarea>
+                              </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="exampleFormControlTextarea1">Proposed payment plan</label>
+                                <textarea class="form-control fields" id="exampleFormControlTextarea1" rows="3"></textarea>
+                              </div>
+                          </div>
+                        </div>
+                        </div>
+                        </div>
+                        </div>
+                    </div><!-- row -->
+                  </section>
+                  
+                  <h3 class="mg-b-0 tx-uppercase tx-15 tx-semibold white mb-4">Approve</h3 class="mg-b-0 tx-uppercase tx-15 tx-semibold white mb-4">
+                  <section>
+                    
+                    <div class="row row-sm white">
+                      <div class="form-group col-12">
+                        <div class="form-row">
+                          <div class="form-group col-md-4">
+                            <label for="inputCity">Business Manager</label>
+                              <select class="form-control fields" id="exampleFormControlSelect1">
+                              <option>Please select a name</option>
+                              <option>2</option>
+                              <option>3</option>
+                              <option>4</option>
+                              <option>5</option>
+                            </select>
+                          </div>
+                          <div class="form-group col-md-4">
+                            <label for="inputState">Regional Head</label>
+                            <select class="form-control fields" id="exampleFormControlSelect1">
+                              <option>Please select a name</option>
+                              <option>2</option>
+                              <option>3</option>
+                              <option>4</option>
+                              <option>5</option>
+                            </select>
+                          </div>
+                          <div class="form-group col-md-4">
+                            <label for="inputZip">Remittance Manager</label>
+                            <select class="form-control fields" id="exampleFormControlSelect1">
+                              <option>Please select a name</option>
+                              <option>2</option>
+                              <option>3</option>
+                              <option>4</option>
+                              <option>5</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="form-row">
+                          <div class="form-group col-md-4">
+                            <label for="inputCity">Chief Compliance Officer</label>
+                              <select class="form-control fields" id="exampleFormControlSelect1">
+                              <option>Please select a name</option>
+                              <option>2</option>
+                              <option>3</option>
+                              <option>4</option>
+                              <option>5</option>
+                            </select>
+                          </div>
+                          <div class="form-group col-md-4">
+                            <label for="inputState">Group Head Operations</label>
+                            <select class="form-control fields" id="exampleFormControlSelect1">
+                              <option>Please select a name</option>
+                              <option>2</option>
+                              <option>3</option>
+                              <option>4</option>
+                              <option>5</option>
+                            </select>
+                          </div>
+                          <div class="form-group col-md-4">
+                            <label for="inputZip">Legal Counsel</label>
+                            <select class="form-control fields" id="exampleFormControlSelect1">
+                              <option>Please select a name</option>
+                              <option>2</option>
+                              <option>3</option>
+                              <option>4</option>
+                              <option>5</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="form-row">
+                          <div class="form-group col-md-4">
+                            <label for="inputCity">Group Head, Internal Control</label>
+                              <select class="form-control fields" id="exampleFormControlSelect1">
+                              <option>Please select a name</option>
+                              <option>2</option>
+                              <option>3</option>
+                              <option>4</option>
+                              <option>5</option>
+                            </select>
+                          </div>
+                          <div class="form-group col-md-4">
+                            <label for="inputState">Executive Director Group COO</label>
+                            <select class="form-control fields" id="exampleFormControlSelect1">
+                              <option>Please select a name</option>
+                              <option>2</option>
+                              <option>3</option>
+                              <option>4</option>
+                              <option>5</option>
+                            </select>
+                          </div>
+                          <div class="form-group col-md-4">
+                            <label for="inputZip">GMD</label>
+                            <select class="form-control fields" id="exampleFormControlSelect1">
+                              <option>Please select a name</option>
+                              <option>2</option>
+                              <option>3</option>
+                              <option>4</option>
+                              <option>5</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div><!-- col -->
+                      
+                    </div><!-- row -->
+                  </section>
+                </div>
+        </div><!-- df-example -->
+            </div>
+              
+          </div><!-- container -->
+        </div>
+    </div>
+
+   <!-- <script src="assets/lib/jquery/jquery.min.js"></script> -->
+
+   <script src="assets/lib/jquery/jquery.min.js"></script>
+   <script src="assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+   <script src="assets/lib/feather-icons/feather.min.js"></script>
+   <script src="assets/lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+   <script src="assets/lib/prismjs/prism.js"></script>
+   <script src="assets/lib/parsleyjs/parsley.min.js"></script>
+   <script src="assets/lib/jquery-steps/build/jquery.steps.min.js"></script>
+    
+        
+
+    <!-- <script src="assets/lib/jquery.flot/jquery.flot.js"></script>
+    <script src="assets/lib/jquery.flot/jquery.flot.stack.js"></script>
+    <script src="assets/lib/jquery.flot/jquery.flot.resize.js"></script>
+    <script src="assets/lib/chart.js/Chart.bundle.min.js"></script> -->
+    <!-- <script src="assets/lib/jqvmap/jquery.vmap.min.js"></script>
+    <script src="assets/lib/jqvmap/maps/jquery.vmap.usa.js"></script> -->
+
+   
+
+    <script src="assets/js/dashforge.js"></script>
+    <script src="assets/js/dashforge.aside.js"></script>
+    <script src="assets/js/dropzone.js"></script>
+    <script src="assets/js/drop.js"></script>
+    <script src="assets/js/dashforge.sampledata.js"></script>
+
+    <!-- append theme customizer -->
+    <script src="assets/lib/js-cookie/js.cookie.js"></script>
+    <script src="assets/js/dashforge.settings.js"></script>
+
+    
+
+    <script>
+     
+      
+     
+      $(function(){
+        'use strict'
+
+        $('#wizard1').steps({
+          headerTag: 'h3',
+          bodyTag: 'section',
+          autoFocus: true,
+          titleTemplate: '<span class="number">#index#</span> <span class="title">#title#</span>'
+        });
+
+        $('#wizard2').steps({
+          headerTag: 'h3',
+          bodyTag: 'section',
+          autoFocus: true,
+          titleTemplate: '<span class="number">#index#</span> <span class="title">#title#</span>',
+          onStepChanging: function (event, currentIndex, newIndex) {
+            if(currentIndex < newIndex) {
+              // Step 1 form validation
+              if(currentIndex === 0) {
+                var fname = $('#firstname').parsley();
+                var lname = $('#lastname').parsley();
+
+                if(fname.isValid() && lname.isValid()) {
+                  return true;
+                } else {
+                  fname.validate();
+                  lname.validate();
+                }
+              }
+
+              // Step 2 form validation
+              if(currentIndex === 1) {
+                var email = $('#email').parsley();
+                if(email.isValid()) {
+                  return true;
+                } else { email.validate(); }
+              }
+            // Always allow step back to the previous step even if the current step is not valid.
+            } else { return true; }
+          }
+        });
+        $("div#letsDoThis").dropzone({ url: "/file/post" });
+        $('#wizard3').steps({
+          headerTag: 'h3',
+          bodyTag: 'section',
+          autoFocus: true,
+          titleTemplate: '<span class="number">#index#</span> <span class="title">#title#</span>',
+          stepsOrientation: 1
+        });
+
+        $('#wizard4').steps({
+          headerTag: 'h3',
+          bodyTag: 'section',
+          autoFocus: true,
+          titleTemplate: '<span class="number">#index#</span> <span class="title">#title#</span>'
+        });
+        $("div#letsDoThis").dropzone({ url: "/file/post" });
+      });
+    </script>
+  </body>
+</html>
