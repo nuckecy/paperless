@@ -524,8 +524,8 @@ table.dataTable tbody tr.odd {
 /* Add request style  ends here */
 
 .plus-btn {
-    width: 35px;
-    height: 35px;
+    width: 55px;
+    height: 55px;
     display: flex;
     align-items: center;
     justify-content: center;
