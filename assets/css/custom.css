@@ -48,14 +48,6 @@
         right: 10px;
         bottom: 15px;
         z-index: 100;
-        width: 60px;
-        height: 60px;
-    }
-
-
-    .plus-btn svg {
-        height: 55px;
-        width: 55px;
     }
 
 }
@@ -532,8 +524,8 @@ table.dataTable tbody tr.odd {
 /* Add request style  ends here */
 
 .plus-btn {
-    width: 35px;
-    height: 35px;
+    width: 55px;
+    height: 55px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -546,6 +538,6 @@ table.dataTable tbody tr.odd {
 }
 
 .plus-btn svg{
-    height: 34px;
-    width: 34px;
+    height: 44px;
+    width: 44px;
 }
