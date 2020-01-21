@@ -42,6 +42,14 @@
             margin-top: 45px;
     }
 
+    .plus-btn
+    {
+        position: absolute;
+        right: 10px;
+        bottom: 15px;
+        z-index: 100;
+    }
+
 }
 
 /* Custom footer design */
@@ -514,3 +522,17 @@ table.dataTable tbody tr.odd {
 }
 
 /* Add request style  ends here */
+
+.plus-btn {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Inter UI", Roboto, sans-serif;
+    color: #ffffff;
+    border: 2px solid #ff0000;
+    background: #ff0000;
+    border-radius: 100%;
+}
