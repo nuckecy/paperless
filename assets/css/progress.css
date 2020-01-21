@@ -1,5 +1,5 @@
 .progress-circle {
-   font-size: 51px;
+   font-size: 30px;
    margin: 20px;
    position: relative; /* so that children can be absolutely positioned */
    padding: 0;

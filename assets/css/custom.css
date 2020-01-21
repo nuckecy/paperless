@@ -36,6 +36,12 @@
         border-bottom: 1px solid #e2e5ed;
     }
 
+    .sign-out {
+            position: absolute;
+            right: 15px;
+            margin-top: 45px;
+    }
+
 }
 
 /* Custom footer design */
