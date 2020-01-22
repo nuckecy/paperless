@@ -50,6 +50,15 @@
         z-index: 100;
     }
 
+    .progress-circle {
+        font-size: 30px !important;
+    }
+
+    .holder-pie,
+    .pie-container {
+        padding-bottom: 10px;
+    }
+
 }
 
 /* Custom footer design */
@@ -540,4 +549,9 @@ table.dataTable tbody tr.odd {
 .plus-btn svg{
     height: 44px;
     width: 44px;
+}
+
+.holder-pie,
+.pie-container {
+    padding-bottom: 38px;
 }
