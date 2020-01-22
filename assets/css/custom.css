@@ -1,5 +1,7 @@
  .theme-light {
+     --color-bg-content: #ffffff;
      --color-bg-container: #ffffff;
+
      --color-h-tags: #222222;
      --color-table-tx: #222222;
 
