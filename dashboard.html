@@ -46,7 +46,7 @@
       <div class="aside-body">
         <div class="aside-loggedin">
           <div class="d-flex align-items-center justify-content-start">
-            <a href="" class="avatar"><img src="assets/img/boy.svg" class="rounded-circle" alt=""></a>
+            <a href="" class="avatar"><img src="assets/img/user-avatar.svg" class="rounded-circle" alt=""></a>
             <div class="aside-alert-link">
               <a href="" class="white" data-toggle="tooltip" title="Sign out"><i data-feather="log-out"></i></a>
             </div>
@@ -95,7 +95,9 @@
           <p class="app-title tx-color-01 pt-3 white">SMART PROCESS MANAGEMENT PLATFORM</p>
         </div>
         <nav class="nav">
-          <div><img class="uba-logo" alt="UBA Logo Dark" src="assets/img/uba_logo_red.svg"></div>
+          <div class="logo-uba-white" id="logo-uba-white"></div>
+          <div class="logo-uba-dark" id="logo-uba-dark"></div>
+          <!-- <div><img class="uba-logo" alt="UBA Logo Dark" src="assets/img/uba_logo_red.svg"></div> -->
           <a href="" class="nav-link pt-2 white sign-out" data-toggle="tooltip" title="Sign out"><i data-feather="log-out"></i></a>
         </nav>
       </div><!-- content-header -->
@@ -1153,12 +1155,18 @@
 
       // Immediately invoked function to set the theme on initial load
       (function () {
-        if (localStorage.getItem('theme') === 'theme-dark') {
+        if (localStorage.getItem('theme') === 'theme-dark') 
+        {
           setTheme('theme-dark');
           document.getElementById('slider').checked = false;
-        } else {
+          document.getElementById('logo-uba-red').display = false;
+          document.getElementById('logo-spmp-red').display = false;
+        } else 
+        {
           setTheme('theme-light');
           document.getElementById('slider').checked = true;
+          document.getElementById('logo-uba-white').display = true;
+          document.getElementById('logo-spmp-white').display = true;
         }
       })();
 
