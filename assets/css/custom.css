@@ -19,6 +19,7 @@
      --color-svg-icons: #707070;
      --color-svg-active: #d70700;
      /* Check for UBA Color */
+     --color-svg-inactive: #ababab;
      --color-svg-plus-btn: white;
  }
 
