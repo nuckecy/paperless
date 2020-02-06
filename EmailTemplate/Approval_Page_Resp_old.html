@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <title>PAPERLESS Approval Notification</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <style type="text/css">
+        body, table, td, a {
+        }
+        .button {
+            font: bold 11px Arial;
+            text-decoration: none;
+            background-color: #d43f3a;
+            color: white;
+            padding: 2px 6px 2px 6px;
+            border-top: 1px solid #CCCCCC;
+            border-right: 1px solid #333333;
+            border-bottom: 1px solid #333333;
+            border-left: 1px solid #CCCCCC;
+        }
+        .btn {
+            display: inline-block;
+            padding: 6px 12px;
+            margin-bottom: 0;
+            font-size: 14px;
+            font-weight: normal;
+            line-height: 1.42857143;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: middle;
+            -ms-touch-action: manipulation;
+            touch-action: manipulation;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            background-image: none;
+            border: 1px solid transparent;
+            border-radius: 4px;
+        }
+
+        .btn-danger {
+            color: #fff;
+            background-color: #d9534f;
+            border-color: #d43f3a;
+        }
+
+            .btn-danger:focus,
+            .btn-danger.focus {
+                color: #fff;
+                background-color: #c9302c;
+                border-color: #761c19;
+            }
+
+            .btn-danger:hover {
+                color: #fff;
+                background-color: #c9302c;
+                border-color: #ac2925;
+            }
+
+            .btn-danger:active,
+            .btn-danger.active,
+            .open > .dropdown-toggle.btn-danger {
+                color: #fff;
+                background-color: #c9302c;
+                border-color: #ac2925;
+            }
+
+                .btn-danger:active:hover,
+                .btn-danger.active:hover,
+                .open > .dropdown-toggle.btn-danger:hover,
+                .btn-danger:active:focus,
+                .btn-danger.active:focus,
+                .open > .dropdown-toggle.btn-danger:focus,
+                .btn-danger:active.focus,
+                .btn-danger.active.focus,
+                .open > .dropdown-toggle.btn-danger.focus {
+                    color: #fff;
+                    background-color: #ac2925;
+                    border-color: #761c19;
+                }
+
+            .btn-danger:active,
+            .btn-danger.active,
+            .open > .dropdown-toggle.btn-danger {
+                background-image: none;
+            }
+
+            .btn-danger.disabled:hover,
+            .btn-danger[disabled]:hover,
+            fieldset[disabled] .btn-danger:hover,
+            .btn-danger.disabled:focus,
+            .btn-danger[disabled]:focus,
+            fieldset[disabled] .btn-danger:focus,
+            .btn-danger.disabled.focus,
+            .btn-danger[disabled].focus,
+            fieldset[disabled] .btn-danger.focus {
+                background-color: #d9534f;
+                border-color: #d43f3a;
+            }
+
+            .btn-danger .badge {
+                color: #d9534f;
+                background-color: #fff;
+            }
+
+        .btn-link {
+            font-weight: normal;
+            color: #337ab7;
+            border-radius: 0;
+        }
+
+            .btn-link,
+            .btn-link:active,
+            .btn-link.active,
+            .btn-link[disabled],
+            fieldset[disabled] .btn-link {
+                background-color: transparent;
+                -webkit-box-shadow: none;
+                box-shadow: none;
+            }
+
+                .btn-link,
+                .btn-link:hover,
+                .btn-link:focus,
+                .btn-link:active {
+                    border-color: transparent;
+                }
+
+                    .btn-link:hover,
+                    .btn-link:focus {
+                        color: #23527c;
+                        text-decoration: underline;
+                        background-color: transparent;
+                    }
+
+                    .btn-link[disabled]:hover,
+                    fieldset[disabled] .btn-link:hover,
+                    .btn-link[disabled]:focus,
+                    fieldset[disabled] .btn-link:focus {
+                        color: #777;
+                        text-decoration: none;
+                    }
+
+        table, td {
+        }
+
+        img {
+        }
+
+        img {
+            border-top-width: 0px;
+            border-top-style: none;
+            border-top-color: -moz-initial;
+            border-right-width: 0px;
+            border-right-style: none;
+            border-right-color: -moz-initial;
+            border-bottom-width: 0px;
+            border-bottom-style: none;
+            border-bottom-color: -moz-initial;
+            border-left-width: 0px;
+            border-left-style: none;
+            border-left-color: -moz-initial;
+            height: auto;
+            line-height: 100%;
+            outline-width: medium;
+            outline-style: none;
+            outline-color: -moz-initial;
+            text-decoration: none;
+        }
+
+        table {
+            border-collapse: collapse !important;
+        }
+
+        body {
+            height: 100% !important;
+            margin-top: 0px !important;
+            margin-right: 0px !important;
+            margin-bottom: 0px !important;
+            margin-left: 0px !important;
+            padding-top: 0px !important;
+            padding-right: 0px !important;
+            padding-bottom: 0px !important;
+            padding-left: 0px !important;
+            width: 100% !important;
+        }
+
+        a[x-apple-data-detectors] {
+            color: !important;
+            text-decoration: none !important;
+            font-size: !important;
+            font-family: !important;
+            font-weight: !important;
+            line-height: !important;
+        }
+
+        @media screen and (max-width: 525px) {
+            .wrapper {
+                width: 100% !important;
+                max-width: 100% !important;
+            }
+
+            .logo img {
+                margin: 0px auto !important;
+            }
+
+            .mobile-hide {
+                display: none !important;
+            }
+
+            .img-max {
+                max-width: 100% !important;
+                width: 100% !important;
+                height: auto !important;
+            }
+
+            .responsive-table {
+                width: 100% !important;
+            }
+
+            .padding {
+                padding: 10px 5% 15px !important;
+            }
+
+            .padding-meta {
+                padding: 30px 5% 0px !important;
+                text-align: center;
+            }
+
+            .padding-copy {
+                padding: 10px 5% !important;
+                text-align: center;
+            }
+
+            .no-padding {
+                padding: 0px !important;
+            }
+
+            .section-padding {
+                padding: 50px 15px !important;
+            }
+
+            .mobile-button-container {
+                margin: 0px auto;
+                width: 100% !important;
+            }
+
+            .mobile-button {
+                padding: 15px !important;
+                border: 0px none !important;
+                font-size: 16px !important;
+                display: block !important;
+            }
+        }
+
+        div[style*="margin: 16px 0;"] {
+            margin-top: 0px !important;
+            margin-right: 0px !important;
+            margin-bottom: 0px !important;
+            margin-left: 0px !important;
+        }
+
+        #commt {
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $.ajax({
+                url: "http://rest-service.guides.spring.io/greeting"
+            }).then(function (data) {
+                $('.greeting-id').append(data.id);
+                $('.greeting-content').append(data.content);
+            });
+        });
+    </script>
+</head>
+<body style="     margin: 0 !important; padding: 0 !important;">
+    <!-- HIDDEN PREHEADER TEXT -->
+    <div style="display: none; font-size: 1px; color: #fefefe; line-height: 1px; font-family: Century Gothic; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden;">
+    </div>
+    <!-- HEADER -->
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tbody>
+           
+            <tr>
+                <td style="padding: 15px;" align="center" bgcolor="#ffffff">
+                    <table style="max-width: 500px;" class="responsive-table" border="0" cellpadding="0" cellspacing="0" width="100%">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <!-- COPY -->
+                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-size: 25px; font-family: Century Gothic;  padding-top: 10px;" class="padding-copy" align="center">#notificationMessage#</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding: 20px 0 0 0; font-size: 16px; line-height: 25px; font-family: Century Gothic; " class="padding-copy" align="left">
+                                                    <p>
+                                                        Kindly view the request form attached.
+                                                    </p>
+                                                    
+                                                    <p>To access the complete details of this approval request <a href='http://10.100.5.195/BranchFormsAutomation/'>click here</a> </p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 15px;" class="padding" align="center" bgcolor="#ffffff">
+                    <table style="max-width: 500px;" class="responsive-table" border="0" cellpadding="0" cellspacing="0" width="100%">
+                        <tbody>
+                            <tr>
+                                <td style="padding: 10px 0 0 0; border-top: 1px dashed #aaaaaa;">
+                                    <!-- TWO COLUMNS -->
+                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tbody>
+                                            <tr>
+                                                <td class="mobile-wrapper" valign="top">
+                                                    <!-- LEFT COLUMN -->
+                                                    <table style="width: 47%;" align="left" border="0" cellpadding="0" cellspacing="0" width="47%">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td style="padding: 0 0 10px 0;">
+                                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td style="font-family: Century Gothic;  font-size: 16px;" align="left">Requester Name:</td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <!-- RIGHT COLUMN -->
+                                                    <table style="width: 47%;" align="right" border="0" cellpadding="0" cellspacing="0" width="47%">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td style="padding: 0 0 10px 0;">
+                                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td style="font-family: Century Gothic;  font-size: 16px;" align="right"><span id="requesterName">#requesterName#</span></td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <!-- TWO COLUMNS -->
+                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tbody>
+                                            <tr>
+                                                <td style="padding: 0;" class="mobile-wrapper" valign="top">
+                                                    <!-- LEFT COLUMN -->
+                                                    <table style="width: 47%;" align="left" border="0" cellpadding="0" cellspacing="0" width="47%">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td style="padding: 0 0 10px 0;">
+                                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td style="font-family: Century Gothic;  font-size: 16px;" align="left">Request Subject</td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <!-- RIGHT COLUMN -->
+                                                    <table style="width: 47%;" align="right" border="0" cellpadding="0" cellspacing="0" width="47%">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td style="padding: 0 0 10px 0;">
+                                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td style="font-family: Century Gothic;  font-size: 16px;" align="right"><span id="requestSubject">#requestSubject#</span></td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <!-- TWO COLUMNS -->
+                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tbody>
+                                            <tr>
+                                                <td style="padding: 0;" class="mobile-wrapper" valign="top">
+                                                    <!-- LEFT COLUMN -->
+                                                    <table style="width: 47%;" align="left" border="0" cellpadding="0" cellspacing="0" width="47%">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td style="padding: 0 0 10px 0;">
+                                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td style="font-family: Century Gothic;  font-size: 16px;" align="left">Request Date</td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <!-- RIGHT COLUMN -->
+                                                    <table style="width: 47%;" align="right" border="0" cellpadding="0" cellspacing="0" width="47%">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td style="padding: 0 0 10px 0;">
+                                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td style="font-family: Century Gothic;  font-size: 16px;" align="right"><span id="requestDate">#requestDate#</span></td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 10px 0 0px 0; border-top: 1px solid #eaeaea; border-bottom: 1px dashed #aaaaaa;">
+                                    <!-- TWO COLUMNS -->
+                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tbody>
+                                            <tr>
+                                                <td class="mobile-wrapper" valign="top">
+                                                    <!-- LEFT COLUMN -->
+                                                    <table style="width: 47%;" align="left" border="0" cellpadding="0" cellspacing="0" width="47%">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td style="padding: 0 0 10px 0;">
+                                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td style="font-family: Century Gothic;  font-size: 16px; font-weight: bold;" align="left">Request Due Date</td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <!-- RIGHT COLUMN -->
+                                                    <table style="width: 47%;" align="right" border="0" cellpadding="0" cellspacing="0" width="47%">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td style="font-family: Century Gothic; color: #ff0000; font-size: 16px; font-weight: bold;" align="right"><span id="requestDuedate">#requestDuedate#</span></td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!--[if (gte mso 9)|(IE)]>
+                    </td>            </tr>            </table>            <![endif]-->
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 15px;" align="center" bgcolor="#ffffff">
+                    <!--[if (gte mso 9)|(IE)]>
+                    <table align="center" border="0" cellspacing="0" cellpadding="0" width="500">            <tr>            <td align="center" valign="top" width="500">            <![endif]-->
+                    <table style="max-width: 500px;" class="responsive-table" border="0" cellpadding="0" cellspacing="0" width="100%">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <!-- COPY -->
+                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                        <tbody>
+                                                            <!--<tr>
+                                                                <td style="padding: 0 0 0 0; margin:0px"; font-size: 14px; line-height: 18px; font-family: Century Gothic; " class="padding-copy" align="left">
+
+                                                                    <p style="margin:0">Kindly log on to <a href='http://10.100.5.195/BranchFormsAutomation/'>PAPERLESS</a> to view the details of this request</p>
+
+                                                                </td>
+                                                            </tr>-->
+                                                            <tr>
+                                                                <td style="margin:0px">
+                                                                    <span id="span_url" style="margin:0">
+                                                                        <a class="btn btn-danger" style="text-decoration:none" href='mailto:apps.notification@ubagroup.com?subject=Re:PAPERLESS APPROVAL,#ApproveParameters#&body=OK'> APPROVE</a> or
+                                                                        <a class="btn btn-danger" style="text-decoration:none" href='mailto:apps.notification@ubagroup.com?subject=Re:PAPERLESS REJECTION,#RejectParameters#&body=DECLINED'> REJECT</a>
+                                                                    </span>
+                                                                </td>
+                                                            </tr>
+                                                            <!-- COPY -->
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            
+        </tbody>
+    </table>
+</body>
+</html>

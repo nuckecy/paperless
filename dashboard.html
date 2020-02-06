@@ -1001,7 +1001,29 @@
     <script src="assets/js/dashforge.settings.js"></script>
 
     <script>
-      $('#pending,#initiated,#rejected,#approved').DataTable({
+      $(function () {
+      'use strict'
+            $('#pending,#initiated,#rejected,#approved').DataTable({
+            responsive: true,
+            language: {
+              searchPlaceholder: 'Search...',
+              sSearch: '',
+              lengthMenu: '_MENU_ items/page',
+              columnDefs: [{
+                  responsivePriority: 1,
+                  targets: 0
+                },
+                {
+                  responsivePriority: 2,
+                  targets: -1
+                }
+              ]
+            }
+          });
+       });
+    </script>
+    <script>
+      $('#incoming').DataTable({
         responsive: true,
         language: {
           searchPlaceholder: 'Search...',
@@ -1019,25 +1041,6 @@
         }
       });
     </script>
-        <script>
-          $('#incoming').DataTable({
-            responsive: true,
-            language: {
-              searchPlaceholder: 'Search...',
-              sSearch: '',
-              lengthMenu: '_MENU_ items/page',
-              columnDefs: [{
-                  responsivePriority: 1,
-                  targets: 0
-                },
-                {
-                  responsivePriority: 2,
-                  targets: -1
-                }
-              ]
-            }
-          });
-        </script>
     <script>
       var chart = document.getElementById('chart').getContext('2d'),
         gradient = chart.createLinearGradient(0, 0, 0, 450);
@@ -1159,14 +1162,10 @@
         {
           setTheme('theme-dark');
           document.getElementById('slider').checked = false;
-          document.getElementById('logo-uba-red').display = false;
-          document.getElementById('logo-spmp-red').display = false;
         } else 
         {
           setTheme('theme-light');
           document.getElementById('slider').checked = true;
-          document.getElementById('logo-uba-white').display = true;
-          document.getElementById('logo-spmp-white').display = true;
         }
       })();
 

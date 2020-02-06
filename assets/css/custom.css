@@ -21,6 +21,9 @@
      /* Check for UBA Color */
      --color-svg-inactive: #ababab;
      --color-svg-plus-btn: white;
+     --color-table-count-bg: #d70700;
+     --color-table-count-tx: white;
+
  }
 
  .theme-dark {
@@ -46,6 +49,8 @@
      /* Check for UBA Color */
      --color-svg-inactive: #ababab;
      --color-svg-plus-btn: white;
+     --color-table-count-bg: white;
+     --color-table-count-tx: #d70700;
  }
 
 body {
@@ -459,8 +464,12 @@ table.dataTable tbody tr.odd {
     justify-content: center;
     flex-shrink: 0;
     border-radius: 100%;
-    background-color: #ED1500;
-    color: #fff;
+    background-color: var(--color-table-count-bg) !important;
+    color: var(--color-table-count-tx) !important;
+}
+
+.table-link a {
+    color: var(--color-table-count-tx) !important;
 }
 
 /* Add request style  ends here */
